@@ -1,16 +1,13 @@
 import { Paper } from '@mui/material'
 import React from 'react'
-import { CartPriceDetailsMobile } from './ShoppingCartMobile/CartPriceDetailsMobile'
 
-export const CartPriceDetails = (props) =>{
+export const CartPriceDetailsMobile = (props) =>{
     const {width} = props
 
     return(
         <>
-        {width == "small" ?
-        <CartPriceDetailsMobile /> : 
-        <div className="w-[55%] pt-[50px] pr-[30px]">
-            <div className='sticky top-0 '>
+        <div className="">
+            <div className='sticky top-0 p-[10px]'>
                 <Paper elevation={2}>
                     <div className='w-full p-[20px] border-b-2'>
                         <h3 className='font-medium text-[#878787]'>PRICE DETAILS</h3>
@@ -43,14 +40,12 @@ export const CartPriceDetails = (props) =>{
                 </div>
                 </Paper>
 
-                <div className='p-[20px] flex items-center gap-[10px]'>
+                <div className='p-[20px] flex justify-center items-center gap-[10px] w-full'>
                     <img src='/freelance-project/logo/security.png' className='w-[30px] h-[30px]'/>
                     <p className='text-gray-500'>Safe and Secure Payments.Easy returns.100% Authentic products.</p>
                 </div>
             </div>
-
         </div>
-        }
         </>
     )
 }

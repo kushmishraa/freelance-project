@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
 
 export const  CustomAppBar = () => {
 
@@ -9,14 +10,16 @@ export const  CustomAppBar = () => {
             <p className='text-white text-2xl font-bold'>Brand Name</p>
         </div>
         
-        <div className='flex gap-[10px] text-white'>
-            
+        <div className='flex gap-[10px] text-white max-md:hidden'>
             <div>Action</div>
             <div>Action</div>
             <div>Action</div>
             <div>Action</div>
-
         </div>
+
+      <div className='hidden max-md:block'>
+        <MenuIcon sx={{color : "white"}}/>
+      </div>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export const Footer = () =>{
     return(
-        <div className="flex w-full justify-between items-center p-[50px] border-t-2 text-[#565656]">
+        <div className="flex w-full justify-between items-center p-[50px] border-t-2 text-[#565656] max-md:hidden">
                 <div className="flex  gap-[50px] items-center">
                     <div>
                     <span>Policies: Return Policy |</span>
