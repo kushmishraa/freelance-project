@@ -11,7 +11,7 @@ function App() {
       <CustomAppBar />
       <Router>
         <Routes>
-        <Route exact path='/cart' element={<ShoppingCartDetailsPage />} />
+        <Route exact path='/freelance-project/cart' element={<ShoppingCartDetailsPage />} />
         </Routes>
       </Router>
       <Footer />
