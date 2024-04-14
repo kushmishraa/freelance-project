@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter , Routes, Route } from "react-router-dom";
 import './App.css';
 import { ShoppingCartDetailsPage } from './ShoppingCart/ShoppingCartDetailsPage';
 import { CustomAppBar } from './Components/CustomAppBar';
@@ -9,11 +8,11 @@ function App() {
   return (
     <>
       <CustomAppBar />
-      <Router>
+      <HashRouter>
         <Routes>
-        <Route exact path='/freelance-project/cart' element={<ShoppingCartDetailsPage />} />
+          <Route  path='/cart' element={<ShoppingCartDetailsPage />} />
         </Routes>
-      </Router>
+      </HashRouter>
       <Footer />
     </>
   );

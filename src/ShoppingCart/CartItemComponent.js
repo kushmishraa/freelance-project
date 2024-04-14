@@ -1,6 +1,5 @@
 import { Button, Paper, TextField, ThemeProvider, createTheme } from "@mui/material";
 import React from "react";
-import { ItemCardComponent } from "./ItemCardComponent";
 import { ItemCard } from "./ItemCard";
 
 export const CartItemComponent = () =>{
