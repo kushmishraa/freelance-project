@@ -39,7 +39,7 @@ export const CartPriceDetails = () =>{
                 </Paper>
 
                 <div className='p-[20px] flex items-center gap-[10px]'>
-                    <img src='/logo/security.png' className='w-[30px] h-[30px]'/>
+                    <img src='/freelance-project/logo/security.png' className='w-[30px] h-[30px]'/>
                     <p className='text-gray-500'>Safe and Secure Payments.Easy returns.100% Authentic products.</p>
                 </div>
             </div>
