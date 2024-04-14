@@ -22,7 +22,7 @@ export const CartPriceDetails = () =>{
                         </div>
                         <div className='flex justify-between'>
                             <div>Delivery Charges</div>
-                            <div><s>₹120</s><span className='text-green-700'>Free</span></div>
+                            <div className='flex gap-[5px]'><s>₹120</s><span className='text-green-700'>Free</span></div>
                         </div>
                     </div>
 

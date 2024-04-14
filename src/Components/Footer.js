@@ -19,7 +19,7 @@ export const Footer = () =>{
          
             
             <div>
-                <span>Need help? Visit the Help Center or Contact Us</span>
+                <span>Need help? Visit the <span className="text-blue-500">Help Center</span> or <span className="text-blue-500">Contact Us</span></span>
             </div>
         </div>
     )
