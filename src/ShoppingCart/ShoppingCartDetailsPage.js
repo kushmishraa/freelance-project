@@ -16,8 +16,14 @@ export const ShoppingCartDetailsPage = (props) =>{
             
             {width == "small" && 
             <div className="sticky w-full bottom-0">       
-             <Paper elevation={4} className=" w-full flex justify-center p-[10px]">
-                 <button className="bg-[#fb641b] px-[56px] py-[10px] text-white font-medium text-xl">Place Order</button>
+             <Paper elevation={4} className="w-full justify-between items-center flex p-[10px]">
+                <div className="flex flex-col">
+                    <span className="font-medium">Price</span>
+                    <span className="font-extrabold text-[18px]">₹1,244</span>
+                </div>
+                <div>
+                 <button className="bg-sky-500 rounded px-[40px] py-[10px] text-white font-medium text-xl">Place Order</button>
+                </div>
              </Paper>
              </div>}
             

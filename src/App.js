@@ -11,10 +11,10 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-     if(window.screen.availWidth < 768){
+     if(window.innerWidth < 768){
         setWidth("small");
       }
-      else if(window.screen.availWidth >= 768){
+      else if(window.innerWidth >= 768){
         setWidth("laptop");
       }
     };

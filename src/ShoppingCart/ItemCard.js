@@ -1,3 +1,4 @@
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import React from "react";
 
 export const ItemCard = () =>{
@@ -7,14 +8,18 @@ export const ItemCard = () =>{
                     <div className="w-[140px] h-[140px] bg-black">
                         <img src="https://rukminim2.flixcart.com/image/224/224/xif0q/t-shirt/y/3/x/m-gucci-tshirt-sti-original-imagzuyecyqaehkt.jpeg?q=90" className="w-[100%] h-[100%] bg-cover"/>
                     </div>
-                <div className="w-full">
+                <div className="w-full flex flex-col gap-[10px]">
                     <div className="flex justify-between">
                         <h3 className="font-normal text-[16px]">sti Printed Men Round Neck White, Black T-Shirt</h3>
-                        <h3 className="font-normal text-[14px]">Delivery by Tue Apr 16 | <s className="font-medium text-gray-400">₹ 40</s> <span className="font-bold text-green-700">Free</span></h3>
                     </div>
-                    <div>
-                        <h3 className="font-normal text-gray-400">Size : M</h3>
-                        <h3 className="font-normal text-gray-400">Seller:STIPVTLTD</h3>
+                    <div className="flex items-center gap-[5px]">
+                        <p>Size :</p>
+                        <select className="px-[10px] py-[5px] border-[1px] border-gray-400">
+                            <option>S</option>
+                            <option>M</option>
+                            <option>XL</option>
+                            <option>XXl</option>
+                        </select>
                     </div>
 
                     <div className="flex gap-[5px]">
@@ -34,15 +39,18 @@ export const ItemCard = () =>{
                 </div>
             </div>
 
-            <div className="flex gap-[10px]">
+            <div className="flex px-[15px] gap-[10px]">
                 <div className="flex gap-[5px] w-[120px]">
-                <button className="bg-white-800 border-[#c2c2c2] border-[1px] w-[28px] h-[28px] rounded-[50%] font-normal" disabled>-</button>
-                <input type="text" className="border-[#c2c2c2] border-[1px] w-[50px] text-center" value={1}></input>
-                <button className="border-[#c2c2c2] border-[1px] w-[28px] h-[28px] rounded-[50%] font-normal">+</button>
+                <select className="border-[1px] border-gray-400 px-[10px] py-[10px]">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>More</option>
+                </select>    
                 </div>
 
                 <div className="flex font-medium gap-[20px] text-lg">
-                    <button className="hover:text-blue-700">Save For Later</button>
+                    <button className="hover:text-blue-700">Move to Wishlist</button>
                     <button className="hover:text-blue-700">Remove</button>
                 </div>
             </div>
