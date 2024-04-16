@@ -3,15 +3,12 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      screens : {
-        "smallMobile" : "320px",
-        "mobile" : "375px",
-        "largeMobile" : "425px"
-      }
+      screens: {
+        "smallMobile": "360px",
+        "mobile": "375px",
+        "largeMobile": "425px",
+      },
     },
   },
-  plugins: [
-    require('@tailwindcss/container-queries'),
-  ],
-}
-
+  plugins: [require("@tailwindcss/container-queries")],
+};

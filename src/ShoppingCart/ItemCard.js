@@ -92,8 +92,8 @@ export const ItemCard = () => {
                 <ArrowDownwardIcon sx={{ color: "#4CAF90" }} />
                 <p className="text-green-700 font-bold">80%</p>
               </div>
-              <div>
-                <s className="text-green-700 font-normal">₹2,499</s>{" "}
+              <div className="flex flex-col mobile:flex mobile:flex-row">
+                <s className="text-green-700 font-normal">₹2,499</s>
                 <span className="font-bold text-lg">₹499</span>
               </div>
             </div>
