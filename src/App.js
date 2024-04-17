@@ -4,13 +4,16 @@ import { ShoppingCartDetailsPage } from "./ShoppingCart/ShoppingCartDetailsPage"
 import { CustomAppBar } from "./Components/CustomAppBar";
 import { Footer } from "./Components/Footer";
 import { useEffect, useState } from "react";
+import { Header } from "./header/Header";
+import { LandingPage } from "./landingPage/LandingPage";
 
 function App() {
   return (
     <>
-      <CustomAppBar />
+      <Header />
       <HashRouter>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/cart" element={<ShoppingCartDetailsPage />} />
         </Routes>
       </HashRouter>

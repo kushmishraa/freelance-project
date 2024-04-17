@@ -8,6 +8,9 @@ module.exports = {
         "mobile": "375px",
         "largeMobile": "425px",
       },
+      colors: {
+        "grey": "#94A7AE"
+      }
     },
   },
   plugins: [require("@tailwindcss/container-queries")],
