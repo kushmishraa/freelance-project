@@ -1,5 +1,6 @@
 import React from "react";
 import { MainCraousel } from "../mainCarousel/MainCarousel";
+import { ProductSection } from "../ProductSection/ProductSection";
 
 export const LandingPage = () => {
   return (
@@ -51,17 +52,20 @@ export const LandingPage = () => {
           />
           <div
             className="
-            w-full flex justify-center items-center
+          w-full flex justify-center items-center
           absolute opacity-0 group-hover:opacity-100 group-hover:bg-black group-hover:bg-opacity-50
           top-0 bottom-0 left-0
           right-0  transition delay-75 duration-300
            ease-in"
           >
-            <button className="text-white bg-sky-500 px-[15px] py-[10px] opacity-100">
+            <button className="text-white bg-sky-500 px-[15px] py-[10px] opacity-100 z-10 cursor-pointer">
               Shop Now
             </button>
           </div>
         </div>
+      </div>
+      <div>
+        <ProductSection />
       </div>
     </div>
   );
