@@ -21,20 +21,23 @@ export const MainCraousel = () => {
             effect="blur"
             width="100%"
             className="max-h-screen bg-contain object-cover"
+            loading="lazy"
           />
         </div>
         <div>
-          <img
+          <LazyLoadImage
             src={"/freelance-project/mainCarouselImages/mainCarousel2.jpg"}
             alt="Main Carousel 1"
             className="max-h-screen min-w-full bg-contain object-cover"
+            loading="lazy"
           />
         </div>
         <div>
-          <img
+          <LazyLoadImage
             src={"/freelance-project/mainCarouselImages/mainCarousel3.jpg"}
             alt="Main Carousel 1"
             className="max-h-screen min-w-full bg-contain object-cover"
+            loading="lazy"
           />
         </div>
       </SlickCarousel>
