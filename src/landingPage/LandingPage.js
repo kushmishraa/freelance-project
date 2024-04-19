@@ -102,7 +102,7 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="flex flex-col gap-[30px]">
         <ProductSection heading={"Trending"} productArr={productArr} />
         <ProductSection heading={"Deals Of The Week"} productArr={productArr} />
         <ProductSection heading={"Beach Wears"} productArr={productArr} />

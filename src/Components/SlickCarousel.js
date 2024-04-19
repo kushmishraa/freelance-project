@@ -14,6 +14,7 @@ export default function SlickCarousel({
   children,
   autoplaySpeed,
   speed,
+  centerPadding
 }) {
   var settings = {
     dots: true,
@@ -30,6 +31,7 @@ export default function SlickCarousel({
     slidesToShow: slidesToShow || 1,
     infinite: infinite,
     centerMode: centerMode || false,
+    centerPadding: "100px"
   };
   return <Slider {...settings}>{children}</Slider>;
 }
