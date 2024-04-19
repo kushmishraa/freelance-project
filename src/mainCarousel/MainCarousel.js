@@ -8,21 +8,19 @@ export const MainCraousel = () => {
   return (
     <div className="h-screen">
       <SlickCarousel
-        autoplay
+        autoplay={false}
         arrows={false}
         infinite={true}
         pauseOnHover={false}
         autoplaySpeed={2000}
         speed={2000}
       >
-        <div className="h-[100%]">
+        <div className="h-screen">
           <LazyLoadImage
             src={"/freelance-project/mainCarouselImages/mainCarousel1.jpg"}
             effect="blur"
             width="100%"
-            className="max-h-screen bg-contain object-cover"
-
-
+            className="h-[100vh] sm:max-h-screen bg-contain object-cover"
           />
         </div>
         <div>
@@ -31,7 +29,7 @@ export const MainCraousel = () => {
             effect="blur"
             alt="Main Carousel 1"
             width="100%"
-            className="max-h-screen min-w-full bg-contain object-cover"
+            className="h-[100vh] sm:max-h-screen min-w-full bg-contain object-cover"
           />
         </div>
         <div>
@@ -40,7 +38,7 @@ export const MainCraousel = () => {
             effect="blur"
             alt="Main Carousel 1"
             width="100%"
-            className="max-h-screen min-w-full bg-contain object-cover"
+            className="h-[100vh] sm:max-h-screen min-w-full bg-contain object-cover"
           />
         </div>
       </SlickCarousel>

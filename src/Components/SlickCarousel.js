@@ -31,7 +31,67 @@ export default function SlickCarousel({
     slidesToShow: slidesToShow || 1,
     infinite: infinite,
     centerMode: centerMode || false,
-    centerPadding: "100px"
+    centerPadding: "100px",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite: true,
+          centerPadding: "10%",
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite: true,
+          centerPadding: "10%",
+        }
+      }
+      , {
+        breakpoint: 660,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite: true,
+          centerPadding: "25%",
+        }
+      }, {
+        breakpoint: 540,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite: true,
+          centerPadding: "20%",
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite: true,
+          centerPadding: "60px",
+        }
+      },
+      {
+        breakpoint: 370,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          infinite: true,
+          centerPadding: "30px",
+        }
+      }
+    ]
   };
   return <Slider {...settings}>{children}</Slider>;
 }

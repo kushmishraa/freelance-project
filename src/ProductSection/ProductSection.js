@@ -26,7 +26,7 @@ export const ProductSection = (props) => {
             return (
               <div className="w-[100%] h-[450px] p-[10px]">
                 <div
-                  className="max-w-[250px]
+                  className="max-w-[250px] min-w-[250px]
                 bg-white  shadow-lg hover:shadow-2xl transition delay-70 
                 hover:mb-[20px] hover:border-2 hover:border-black cursor-pointer hover:rounded-b"
                 >

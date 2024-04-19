@@ -9,22 +9,23 @@ export const Header = (props) => {
     const searchBarRef = useRef();
     const inputRef = useRef();
 
-    const handleSearchBar = () => {
-        if (searchBarRef.current.classList.contains("scale-x-0")) {
-            searchBarRef.current.classList.replace("scale-x-0", "scale-x-100");
+    const handleSearchBar = (e) => {
+        if (inputRef.current.classList.contains("scale-x-0")) {
+            inputRef.current.classList.replace("scale-x-0", "scale-x-100");
             inputRef.current.focus();
-        } else {
-            searchBarRef.current.classList.replace("scale-x-100", "scale-x-0");
+        }
+        else {
+            inputRef.current.classList.replace("scale-x-100", "scale-x-0")
         }
     };
     return (
         <Paper elevation={4} className="sticky top-0 z-10">
             <div className="w-full flex bg-white justify-between items-center py-[20px] px-[10px] gap-[15px] sm:px-[50px]">
-                <div>
+                <div className="pr-[20px] sm:p-[0px]">
                     <h2 className="text-black text-2xl font-bold">Ceazur</h2>
                 </div>
 
-                <div className="w-1/2 border-[1px] border-black flex items-center relative rounded-lg divide-x-2 divide-y">
+                <div className=" w-full  sm:w-1/2  flex items-center relative rounded-lg">
                     <div
                         className=" py-[5px] px-[5px]
          border-r-0  transition delay-70 w-full border-r-0 rounded-l-xl"
@@ -32,9 +33,11 @@ export const Header = (props) => {
                     >
                         <input
                             placeholder="Search"
-                            className="sm:py-[5px] sm:px-[15px] 
-                        focus:outline-none sm:rounded-l-2xl w-full"
-                            onBlur={handleSearchBar}
+                            className="py-[5px] px-[5px] rounded sm:py-[5px] sm:px-[15px] 
+                        focus:outline-none scale-x-0 sm:rounded-l-2xl w-full border-[1px] 
+                        transition duration-70
+                        border-black"
+                            onBlur={(e) => handleSearchBar(e)}
                             ref={inputRef}
                         ></input>
                     </div>
@@ -45,6 +48,8 @@ export const Header = (props) => {
                         <SearchIcon className="text-black group-hover/searchbar:text-white" onClick={handleSearchBar} />
                     </div>
                 </div>
+
+
 
                 <div className="hidden sm:flex sm:gap-[10px]">
                     <AccountCircleIcon sx={{ color: "black" }} />

@@ -46,8 +46,8 @@ export const LandingPage = () => {
       <div className="">
         <MainCraousel />
       </div>
-      <div className="flex justify-center w-full gap-[30px] p-[20px] h-[400px]">
-        <div className="group bg-black relative flex-1">
+      <div className="flex flex-col sm:flex-row justify-center w-full gap-[30px] p-[20px] ">
+        <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage1.jpg"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
@@ -65,7 +65,7 @@ export const LandingPage = () => {
             </button>
           </div>
         </div>
-        <div className="group bg-black relative flex-1">
+        <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage2.jpg"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
@@ -83,7 +83,7 @@ export const LandingPage = () => {
             </button>
           </div>
         </div>
-        <div className="group bg-black relative flex-1">
+        <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage1.jpg"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
