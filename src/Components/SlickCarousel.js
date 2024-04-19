@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,6 +12,8 @@ export default function SlickCarousel({
   pauseOnHover,
   showDots,
   children,
+  autoplaySpeed,
+  speed,
 }) {
   var settings = {
     dots: true,
@@ -19,12 +21,12 @@ export default function SlickCarousel({
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: autoplay,
-    speed: 2000,
+    speed: speed || 1000,
     cssEase: "ease-in",
     pauseOnHover: pauseOnHover,
     dots: false,
     arrows: arrows || false,
-    autoplaySpeed: 2000,
+    autoplaySpeed: autoplaySpeed || 1000,
     slidesToShow: slidesToShow || 1,
     infinite: infinite,
     centerMode: centerMode || false,

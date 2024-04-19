@@ -1,15 +1,26 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import SlickCarousel from "../Components/SlickCarousel";
+
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 export const MainCraousel = () => {
   return (
     <div className="h-screen">
-      <SlickCarousel autoplay arrows={false}>
+      <SlickCarousel
+        autoplay
+        arrows={false}
+        infinite={true}
+        pauseOnHover={false}
+        autoplaySpeed={2000}
+        speed={2000}
+      >
         <div className="h-[100%]">
-          <img
+          <LazyLoadImage
             src={"/freelance-project/mainCarouselImages/mainCarousel1.jpg"}
-            alt="Main Carousel 1"
-            className="max-h-screen min-w-full bg-contain object-cover"
+            effect="blur"
+            width="100%"
+            className="max-h-screen bg-contain object-cover"
           />
         </div>
         <div>
