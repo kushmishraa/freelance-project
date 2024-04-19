@@ -30,6 +30,7 @@ export const MainCraousel = () => {
             src={"/freelance-project/mainCarouselImages/mainCarousel2.jpg"}
             effect="blur"
             alt="Main Carousel 1"
+            width="100%"
             className="max-h-screen min-w-full bg-contain object-cover"
           />
         </div>
@@ -38,6 +39,7 @@ export const MainCraousel = () => {
             src={"/freelance-project/mainCarouselImages/mainCarousel3.jpg"}
             effect="blur"
             alt="Main Carousel 1"
+            width="100%"
             className="max-h-screen min-w-full bg-contain object-cover"
           />
         </div>
