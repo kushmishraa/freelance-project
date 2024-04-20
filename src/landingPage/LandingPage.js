@@ -6,38 +6,38 @@ export const LandingPage = () => {
   const productArr = [
     {
       productHeading: "Bulmer Tshirt",
-      productBannerImage: "/freelance-project/productCatImages/tshirt1.jpg",
+      productBannerImage: "/freelance-project/productCatImages/tshirt1.webp",
       productTileImages: [
-        "/freelance-project/productCatImages/tshirt1-2.jpg",
-        "/freelance-project/productCatImages/tshirt1-3.jpg",
-        "/freelance-project/productCatImages/tshirt1-4.jpg",
+        "/freelance-project/productCatImages/tshirt1-2.webp",
+        "/freelance-project/productCatImages/tshirt1-3.webp",
+        "/freelance-project/productCatImages/tshirt1-4.webp",
       ],
     },
     {
       productHeading: "StormBorn",
-      productBannerImage: "/freelance-project/productCatImages/tshirt2.jpg",
+      productBannerImage: "/freelance-project/productCatImages/tshirt2.webp",
       productTileImages: [
-        "/freelance-project/productCatImages/tshirt2-1.jpg",
-        "/freelance-project/productCatImages/tshirt2-2.jpg",
-        "/freelance-project/productCatImages/tshirt2-3.jpg",
+        "/freelance-project/productCatImages/tshirt2-1.webp",
+        "/freelance-project/productCatImages/tshirt2-2.webp",
+        "/freelance-project/productCatImages/tshirt2-3.webp",
       ],
     },
     {
       productHeading: "Bulmer Tshirt",
-      productBannerImage: "/freelance-project/productCatImages/tshirt1.jpg",
+      productBannerImage: "/freelance-project/productCatImages/tshirt1.webp",
       productTileImages: [
-        "/freelance-project/productCatImages/tshirt1-2.jpg",
-        "/freelance-project/productCatImages/tshirt1-3.jpg",
-        "/freelance-project/productCatImages/tshirt1-4.jpg",
+        "/freelance-project/productCatImages/tshirt1-2.webp",
+        "/freelance-project/productCatImages/tshirt1-3.webp",
+        "/freelance-project/productCatImages/tshirt1-4.webp",
       ],
     },
     {
       productHeading: "StormBorn",
-      productBannerImage: "/freelance-project/productCatImages/tshirt2.jpg",
+      productBannerImage: "/freelance-project/productCatImages/tshirt2.webp",
       productTileImages: [
-        "/freelance-project/productCatImages/tshirt2-1.jpg",
-        "/freelance-project/productCatImages/tshirt2-2.jpg",
-        "/freelance-project/productCatImages/tshirt2-3.jpg",
+        "/freelance-project/productCatImages/tshirt2-1.webp",
+        "/freelance-project/productCatImages/tshirt2-2.webp",
+        "/freelance-project/productCatImages/tshirt2-3.webp",
       ],
     },
   ];
@@ -49,7 +49,7 @@ export const LandingPage = () => {
       <div className="flex flex-col sm:flex-row justify-center w-full gap-[30px] p-[20px] ">
         <div className="group bg-black relative  h-[400px] w-full">
           <img
-            src="/freelance-project/categoryImages/catImage1.jpg"
+            src="/freelance-project/categoryImages/catImage1.webp"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
             loading="lazy"
           />
@@ -68,7 +68,7 @@ export const LandingPage = () => {
         </div>
         <div className="group bg-black relative  h-[400px] w-full">
           <img
-            src="/freelance-project/categoryImages/catImage2.jpg"
+            src="/freelance-project/categoryImages/catImage2.webp"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50"
             loading="lazy"
           />
@@ -87,7 +87,7 @@ export const LandingPage = () => {
         </div>
         <div className="group bg-black relative  h-[400px] w-full">
           <img
-            src="/freelance-project/categoryImages/catImage1.jpg"
+            src="/freelance-project/categoryImages/catImage1.webp"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50"
             loading="lazy"
           />
