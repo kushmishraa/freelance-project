@@ -51,6 +51,7 @@ export const LandingPage = () => {
           <img
             src="/freelance-project/categoryImages/catImage1.jpg"
             className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
+            loading="lazy"
           />
           <div
             className="
@@ -68,7 +69,8 @@ export const LandingPage = () => {
         <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage2.jpg"
-            className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
+            className="h-[100%] w-[100%] bg-transparent hover:opacity-50"
+            loading="lazy"
           />
           <div
             className="
@@ -86,7 +88,8 @@ export const LandingPage = () => {
         <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage1.jpg"
-            className="h-[100%] w-[100%] bg-transparent hover:opacity-50 "
+            className="h-[100%] w-[100%] bg-transparent hover:opacity-50"
+            loading="lazy"
           />
           <div
             className="
