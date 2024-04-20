@@ -17,28 +17,31 @@ export const MainCraousel = () => {
       >
         <div className="h-screen">
           <LazyLoadImage
-            src={"/freelance-project/mainCarouselImages/mainCarousel1.jpg"}
+            src={"/freelance-project/mainCarouselImages/mainCarousel1.webp"}
             effect="blur"
             width="100%"
             className="h-[100vh] sm:max-h-screen bg-contain object-cover"
+            loading="lazy"
           />
         </div>
         <div>
           <LazyLoadImage
-            src={"/freelance-project/mainCarouselImages/mainCarousel2.jpg"}
+            src={"/freelance-project/mainCarouselImages/mainCarousel2.webp"}
             effect="blur"
             alt="Main Carousel 1"
             width="100%"
             className="h-[100vh] sm:max-h-screen min-w-full bg-contain object-cover"
+            loading="lazy"
           />
         </div>
         <div>
           <LazyLoadImage
-            src={"/freelance-project/mainCarouselImages/mainCarousel3.jpg"}
+            src={"/freelance-project/mainCarouselImages/mainCarousel3.webp"}
             effect="blur"
             alt="Main Carousel 1"
             width="100%"
             className="h-[100vh] sm:max-h-screen min-w-full bg-contain object-cover"
+            loading="lazy"
           />
         </div>
       </SlickCarousel>

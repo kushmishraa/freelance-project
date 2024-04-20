@@ -35,6 +35,7 @@ export const ProductSection = (props) => {
                       <img
                         src={productDetails.productBannerImage}
                         className="max-w-[100%] max-h-[100%]"
+                        loading="lazy"
                       ></img>
                     </div>
 
@@ -55,7 +56,7 @@ export const ProductSection = (props) => {
                         {productDetails.productTileImages.map((tileImages) => {
                           return (
                             <div className="">
-                              <img src={tileImages} />
+                              <img src={tileImages} loading="lazy" />
                             </div>
                           );
                         })}
