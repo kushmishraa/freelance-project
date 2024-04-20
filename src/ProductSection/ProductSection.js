@@ -41,7 +41,7 @@ export const ProductSection = (props) => {
                     <div
                       className=" absolute w-full top-0 scale-0
                       group-hover/productImage:scale-100
-                      max-h-[400px] transition delay-70 ease-in"
+                      max-h-[400px] transition delay-70 ease-in origin-right"
                     >
                       <SlickCarousel
                         infinite={true}
