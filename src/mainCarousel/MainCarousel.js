@@ -8,7 +8,7 @@ export const MainCraousel = () => {
   return (
     <div className="h-screen">
       <SlickCarousel
-        autoplay={false}
+        autoplay={true}
         arrows={false}
         infinite={true}
         pauseOnHover={false}
