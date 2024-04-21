@@ -5,7 +5,7 @@ import { Paper } from "@mui/material";
 export const ProductSection = (props) => {
   const { heading, productArr } = props;
   return (
-    <div className="w-full flex flex-col gap-[10px] p-[10px]">
+    <div className="w-full  flex flex-col gap-[10px] p-[10px]">
       <div>
         <h2 className="text-2xl font-bold">{heading}</h2>
       </div>
@@ -19,7 +19,7 @@ export const ProductSection = (props) => {
           showDots={false}
           centerMode={true}
           autoplaySpeed={2000}
-          speed={2000}
+          speed={100}
           centerPadding={"20%"}
         >
           {productArr?.map((productDetails) => {
@@ -28,7 +28,7 @@ export const ProductSection = (props) => {
                 <div
                   className="max-w-[250px] min-w-[250px]
                 bg-white  shadow-lg hover:shadow-2xl transition delay-70 
-                hover:mb-[20px] hover:border-2 hover:border-black cursor-pointer hover:rounded-b"
+                hover:mb-[20px]  cursor-pointer "
                 >
                   <div className="group/productImage relative">
                     <div className="">
@@ -51,7 +51,7 @@ export const ProductSection = (props) => {
                         slidesToShow={1}
                         showDots={true}
                         autoplaySpeed={1000}
-                        speed={1000}
+                        speed={500}
                       >
                         {productDetails.productTileImages.map((tileImages) => {
                           return (
@@ -64,7 +64,7 @@ export const ProductSection = (props) => {
                     </div>
                   </div>
                   <Paper elevation={4}>
-                    <div className="p-[12px] border-black">
+                    <div className="p-[12px] border-2 hover:border-gray-400">
                       <div>
                         <h2 className="font-bold">
                           {productDetails.productHeading}

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
@@ -11,6 +11,10 @@ export const Header = (props) => {
     const searchBarRef = useRef();
     const inputRef = useRef();
     const menuRef = useRef();
+    const searchResultRef = useRef();
+
+    const [searchQuery, setSearchQuery] = useState()
+    const [isUserLoggedIn, setLoggedInUser] = useState(false);
 
     const handleSearchBar = (e) => {
         if (inputRef.current.classList.contains("scale-x-0")) {
@@ -18,6 +22,7 @@ export const Header = (props) => {
         }
         else {
             inputRef.current.classList.replace("scale-x-100", "scale-x-0")
+            handleSearch();
         }
     };
 
@@ -27,6 +32,16 @@ export const Header = (props) => {
 
     const handleMenuClose = () => {
         menuRef.current.classList.replace("scale-x-100", "scale-x-0");
+    }
+
+    const handleSearch = (e) => {
+        e?.target && setSearchQuery(e.target.value);
+        if (e?.target.value.length >= 3) {
+            searchResultRef.current.classList.replace("scale-y-0", "scale-y-100");
+        }
+        else {
+            searchResultRef.current.classList.replace("scale-y-100", "scale-y-0");
+        }
     }
     return (
         <Paper elevation={4} className="sticky top-0 z-10">
@@ -39,7 +54,9 @@ export const Header = (props) => {
                     <div className="w-full  sm:w-1/2  flex items-center rounded-lg">
                         <div
                             className=" py-[5px] px-[5px]
-         border-r-0  transition delay-70 w-full border-r-0 rounded-l-xl"
+                            border-r-0  transition delay-70
+                             w-full border-r-0 rounded-l-xl
+                             relative"
                             ref={searchBarRef}
                         >
                             <input
@@ -50,7 +67,24 @@ export const Header = (props) => {
                         border-black origin-right"
                                 onBlur={(e) => handleSearchBar(e)}
                                 ref={inputRef}
+                                value={searchQuery}
+                                onChange={handleSearch}
                             ></input>
+                            <div className="absolute  w-full bg-white max-h-[300px] overflow-y-scroll
+                             top-[100%] scale-y-0 transition delay-70 origin-top scrollbar *:cursor-pointer" ref={searchResultRef}>
+                                <ul className="*:p-[12px]">
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                    <li className="hover:font-bold">Item 1</li>
+                                </ul>
+                            </div>
                         </div>
                         <div
                             className="group/searchbar px-[10px] py-[5px] sm:px-[50px] sm:py-[10px] hover:bg-black transition delay-70 pointer  rounded sm:rounded-r-lg 
@@ -61,9 +95,9 @@ export const Header = (props) => {
                     </div>
 
                     <div className="hidden sm:flex items-center sm:gap-[20px]">
-                        {false ? <AccountCircleIcon sx={{ color: "black" }} /> :
+                        {isUserLoggedIn ? <AccountCircleIcon sx={{ color: "black" }} /> :
                             <p className="font-bold cursor-pointer px-[10px] py-[5px] 
-                            rounded-xl">
+                            rounded-xl" onClick={() => setLoggedInUser(!isUserLoggedIn)}>
                                 Login
                             </p>}
                         <div className="relative cursor-pointer">
@@ -89,9 +123,9 @@ export const Header = (props) => {
                 bottom-0 scale-x-0 transition delay-70 flex items-center justify-center origin-right" ref={menuRef}>
                     <div className="flex items-center">
                         <div className="flex gap-[30px] ">
-                            {false ? <AccountCircleIcon sx={{ color: "black" }} /> :
+                            {isUserLoggedIn ? <AccountCircleIcon sx={{ color: "black" }} /> :
                                 <p className="font-bold cursor-pointer px-[10px] py-[5px] 
-                            rounded-xl">
+                            rounded-xl" onClick={() => setLoggedInUser(!isUserLoggedIn)}>
                                     Login
                                 </p>
                             }
