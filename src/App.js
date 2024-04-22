@@ -6,6 +6,7 @@ import { Footer } from "./Components/Footer";
 import { useEffect, useState } from "react";
 import { Header } from "./header/Header";
 import { LandingPage } from "./landingPage/LandingPage";
+import { CategoryDetailsPage } from "./CategoryDetailsPage/CategoryDetailsPage";
 
 function App() {
   return (
@@ -15,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/cart" element={<ShoppingCartDetailsPage />} />
+          <Route path="/category" element={<CategoryDetailsPage />}>
+            <Route path=":categoryName" element={<CategoryDetailsPage />} />
+          </Route>
         </Routes>
       </HashRouter>
       <Footer />

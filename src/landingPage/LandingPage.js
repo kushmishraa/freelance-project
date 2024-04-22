@@ -1,6 +1,7 @@
 import React from "react";
 import { MainCraousel } from "../mainCarousel/MainCarousel";
 import { ProductSection } from "../ProductSection/ProductSection";
+import { Link } from "react-router-dom";
 
 export const LandingPage = () => {
   // populate products in the same structure or change your mapping accordingly.
@@ -67,11 +68,14 @@ export const LandingPage = () => {
           right-0  transition delay-70
            ease-in pb-[30px]"
           >
-            <button className="text-white border-2 border-white px-[15px] py-[10px] opacity-100 hover:bg-white hover:text-black transition dely-70">
-              Shop Now
-            </button>
+            <Link to={"/category/beaches"}>
+              <button className="text-white border-2 border-white px-[15px] py-[10px] opacity-100 hover:bg-white hover:text-black transition dely-70">
+                Shop Now
+              </button>
+            </Link>
           </div>
         </div>
+
         <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage2.webp"
@@ -91,6 +95,7 @@ export const LandingPage = () => {
             </button>
           </div>
         </div>
+
         <div className="group bg-black relative  h-[400px] w-full">
           <img
             src="/freelance-project/categoryImages/catImage1.webp"
