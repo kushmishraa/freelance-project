@@ -3,6 +3,7 @@ import { MainCraousel } from "../mainCarousel/MainCarousel";
 import { ProductSection } from "../ProductSection/ProductSection";
 
 export const LandingPage = () => {
+  // populate products in the same structure or change your mapping accordingly.
   const productArr = [
     {
       productHeading: "Bulmer Tshirt",
@@ -41,11 +42,16 @@ export const LandingPage = () => {
       ],
     },
   ];
+
   return (
     <div>
+      {/* Banner carousel container */}
       <div className="">
         <MainCraousel />
       </div>
+      {/* Banner carousel container */}
+
+      {/* categories section */}
       <div className="flex flex-col sm:flex-row justify-center w-full gap-[30px] p-[20px] ">
         <div className="group bg-black relative  h-[400px] w-full">
           <img
@@ -105,11 +111,15 @@ export const LandingPage = () => {
           </div>
         </div>
       </div>
+      {/* categories section */}
+
+      {/* product section */}
       <div className="flex flex-col gap-[30px]">
         <ProductSection heading={"Trending"} productArr={productArr} />
         <ProductSection heading={"Deals Of The Week"} productArr={productArr} />
         <ProductSection heading={"Beach Wears"} productArr={productArr} />
       </div>
+      {/* product section */}
     </div>
   );
 };

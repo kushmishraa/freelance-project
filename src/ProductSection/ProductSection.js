@@ -4,12 +4,26 @@ import { Paper } from "@mui/material";
 
 export const ProductSection = (props) => {
   const { heading, productArr } = props;
+  const className = {
+    productSectionContainer: "w-full  flex flex-col gap-[10px] p-[10px]",
+    productSectionCarouselHolder: "max-w-full",
+    singleProductContainer: "w-[100%] h-[450px] p-[10px]",
+    productBannerImageContainer:
+      "max-w-[250px] min-w-[250px] bg-white  shadow-lg hover:shadow-2xl transition delay-70 hover:mb-[20px]  cursor-pointer",
+    productTileCarouselHolder:
+      " absolute w-full top-0 scale-0 group-hover/productImage:scale-100 max-h-[400px] transition delay-70 ease-in origin-right",
+  };
   return (
-    <div className="w-full  flex flex-col gap-[10px] p-[10px]">
+    // product section container
+    <div className={className.productSectionContainer}>
+      {/* product heading */}
       <div>
         <h2 className="text-2xl font-bold">{heading}</h2>
       </div>
-      <div className="max-w-full">
+      {/* product heading */}
+
+      {/* product section carousel holder */}
+      <div className={className.productSectionCarouselHolder}>
         <SlickCarousel
           arrows={false}
           autoplay={true}
@@ -24,13 +38,12 @@ export const ProductSection = (props) => {
         >
           {productArr?.map((productDetails) => {
             return (
-              <div className="w-[100%] h-[450px] p-[10px]">
-                <div
-                  className="max-w-[250px] min-w-[250px]
-                bg-white  shadow-lg hover:shadow-2xl transition delay-70 
-                hover:mb-[20px]  cursor-pointer "
-                >
+              // single product container
+              <div className={className.singleProductContainer}>
+                {/* product banner image container */}
+                <div className={className.productBannerImageContainer}>
                   <div className="group/productImage relative">
+                    {/* product image */}
                     <div className="">
                       <img
                         src={productDetails.productBannerImage}
@@ -38,12 +51,10 @@ export const ProductSection = (props) => {
                         loading="lazy"
                       ></img>
                     </div>
+                    {/* product image */}
 
-                    <div
-                      className=" absolute w-full top-0 scale-0
-                      group-hover/productImage:scale-100
-                      max-h-[400px] transition delay-70 ease-in origin-right"
-                    >
+                    {/* product tiles carousel holder */}
+                    <div className={className.productTileCarouselHolder}>
                       <SlickCarousel
                         infinite={true}
                         autoplay={true}
@@ -55,14 +66,19 @@ export const ProductSection = (props) => {
                       >
                         {productDetails.productTileImages.map((tileImages) => {
                           return (
+                            // tile images
                             <div className="">
                               <img src={tileImages} loading="lazy" />
                             </div>
+                            // tile images end
                           );
                         })}
                       </SlickCarousel>
                     </div>
+                    {/* product tiles carousel holder */}
                   </div>
+
+                  {/* product description bottom box container */}
                   <Paper elevation={4}>
                     <div className="p-[12px] border-2 hover:border-gray-400">
                       <div>
@@ -81,12 +97,17 @@ export const ProductSection = (props) => {
                       </div>
                     </div>
                   </Paper>
+                  {/* product description bottom box container */}
                 </div>
+                {/* product banner image container */}
               </div>
+              // single product container end
             );
           })}
         </SlickCarousel>
       </div>
+      {/* product section carousel holder */}
     </div>
+    // product section container
   );
 };

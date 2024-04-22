@@ -14,10 +14,10 @@ export default function SlickCarousel({
   children,
   autoplaySpeed,
   speed,
-  centerPadding
+  centerPadding,
 }) {
   var settings = {
-    dots: true,
+    dots: false,
     speed: 500,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
@@ -25,12 +25,13 @@ export default function SlickCarousel({
     speed: speed || 1000,
     cssEase: "ease-in",
     pauseOnHover: pauseOnHover,
-    dots: false,
     arrows: arrows || false,
     autoplaySpeed: autoplaySpeed || 1000,
     slidesToShow: slidesToShow || 1,
     infinite: infinite,
+    // Display the carousel tiles in the center mode
     centerMode: centerMode || false,
+    //used to change the gap between the carousel when center mode is true.
     centerPadding: "100px",
     responsive: [
       {
@@ -41,7 +42,7 @@ export default function SlickCarousel({
           autoplay: true,
           infinite: true,
           centerPadding: "10%",
-        }
+        },
       },
       {
         breakpoint: 768,
@@ -51,9 +52,9 @@ export default function SlickCarousel({
           autoplay: true,
           infinite: true,
           centerPadding: "10%",
-        }
-      }
-      , {
+        },
+      },
+      {
         breakpoint: 660,
         settings: {
           slidesToShow: 1,
@@ -61,8 +62,9 @@ export default function SlickCarousel({
           autoplay: true,
           infinite: true,
           centerPadding: "25%",
-        }
-      }, {
+        },
+      },
+      {
         breakpoint: 540,
         settings: {
           slidesToShow: 1,
@@ -70,8 +72,9 @@ export default function SlickCarousel({
           autoplay: true,
           infinite: true,
           centerPadding: "20%",
-        }
-      }, {
+        },
+      },
+      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
@@ -79,7 +82,7 @@ export default function SlickCarousel({
           autoplay: true,
           infinite: true,
           centerPadding: "60px",
-        }
+        },
       },
       {
         breakpoint: 370,
@@ -89,9 +92,9 @@ export default function SlickCarousel({
           autoplay: true,
           infinite: true,
           centerPadding: "30px",
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
   return <Slider {...settings}>{children}</Slider>;
 }

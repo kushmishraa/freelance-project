@@ -6,7 +6,9 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 export const MainCraousel = () => {
   return (
+    // Main carousel image container
     <div className="h-screen">
+      {/* Main carousel holder */}
       <SlickCarousel
         autoplay={true}
         arrows={false}
@@ -45,6 +47,8 @@ export const MainCraousel = () => {
           />
         </div>
       </SlickCarousel>
+      {/* Main carousel holder */}
     </div>
+    // Main carousel image container
   );
 };
