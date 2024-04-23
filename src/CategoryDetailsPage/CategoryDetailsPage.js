@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import SlickCarousel from '../Components/SlickCarousel';
 import { Paper } from '@mui/material';
 
@@ -9,7 +9,7 @@ export const CategoryDetailsPage = () => {
         console.log(params);
     }, [])
     const className = {
-        singleProductContainer: "h-[450px] p-[10px]",
+        singleProductContainer: "h-[450px] p-[10px] cursor-pointer",
         productBannerImageContainer:
             "max-w-[250px] min-w-[250px] bg-white  shadow-lg hover:shadow-2xl transition delay-70 hover:mb-[20px]  cursor-pointer",
         productTileCarouselHolder:
@@ -116,6 +116,17 @@ export const CategoryDetailsPage = () => {
             ],
         },
     ];
+
+    const navigate = useNavigate();
+
+
+    const handleCardClick = (productHeading, e) => {
+
+        navigate(`/product/${productHeading}`)
+    }
+
+
+
     return (
         <div>
             {/* banner holder */}
@@ -129,9 +140,10 @@ export const CategoryDetailsPage = () => {
 
             <div className='mx-[10%]'>
                 <div className='flex justify-center  flex-wrap'>{
-                    productArr.map((productDetails) => {
+                    productArr.map((productDetails, index) => {
                         return (
-                            < div className={className.singleProductContainer} >
+
+                            <div className={className.singleProductContainer} onClick={(e) => handleCardClick(productDetails.productHeading, e)}>
                                 {/* product banner image container */}
                                 < div className={className.productBannerImageContainer} >
                                     <div className="group/productImage relative">
@@ -168,8 +180,14 @@ export const CategoryDetailsPage = () => {
                                             </SlickCarousel>
                                         </div>
                                         {/* product tiles carousel holder */}
-                                        <div className='absolute scale-y-0 group-hover/productImage:scale-y-100 bg-white w-full top-[100%] h-[60px] flex items-center justify-center orgin-bottom'>
-                                            <button className='px-[10px] py-[5px] border-[1px] border-black hover:bg-red-500 transition duration-70 hover:border-[0px] hover:text-white'>Add to whishlist</button>
+                                        <div className='absolute scale-y-0 group-hover/productImage:scale-y-100 
+                                            bg-white w-full top-[100%] h-[60px] 
+                                            flex items-center justify-center 
+                                            orgin-bottom'>
+                                            <button className='px-[10px] py-[5px] border-[1px] border-black 
+                                                hover:bg-red-500 transition duration-70 
+                                                hover:border-[0px] 
+                                                hover:text-white' onClick={(e) => e.stopPropagation()}>Add to whishlist</button>
                                         </div>
                                     </div>
 
@@ -195,7 +213,7 @@ export const CategoryDetailsPage = () => {
                                     {/* product description bottom box container */}
                                 </div>
                                 {/* product banner image container */}
-                            </div >
+                            </div>
                         )
                     })
                 }

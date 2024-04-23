@@ -1,6 +1,7 @@
 import React from "react";
 import SlickCarousel from "../Components/SlickCarousel";
 import { Paper } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const ProductSection = (props) => {
   const { heading, productArr } = props;
@@ -13,6 +14,12 @@ export const ProductSection = (props) => {
     productTileCarouselHolder:
       " absolute w-full top-0 scale-0 group-hover/productImage:scale-100 max-h-[400px] transition delay-70 ease-in origin-right",
   };
+
+  const navigate = useNavigate();
+
+  const handleCardClick = (productName) => {
+    navigate(`/product/${productName}`);
+  }
   return (
     // product section container
     <div className={className.productSectionContainer}>
@@ -39,7 +46,7 @@ export const ProductSection = (props) => {
           {productArr?.map((productDetails) => {
             return (
               // single product container
-              <div className={className.singleProductContainer}>
+              <div className={className.singleProductContainer} onClick={() => handleCardClick(productDetails.productHeading)}>
                 {/* product banner image container */}
                 <div className={className.productBannerImageContainer}>
                   <div className="group/productImage relative">

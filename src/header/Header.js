@@ -6,12 +6,14 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Paper } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom";
 
 export const Header = (props) => {
   const searchBarRef = useRef();
   const inputRef = useRef();
   const menuRef = useRef();
   const searchResultRef = useRef();
+  const navigate = useNavigate();
 
   const [searchQuery, setSearchQuery] = useState();
   const [isUserLoggedIn, setLoggedInUser] = useState(false);
@@ -56,7 +58,7 @@ export const Header = (props) => {
       <div className={clasName.headerContainer}>
         <div className={clasName.headerLeftContainer}>
           {/* logo holder */}
-          <div className="pr-[20px] sm:p-[0px]">
+          <div className="pr-[20px] sm:p-[0px] cursor-pointer" onClick={() => navigate('/')}>
             <h2 className="text-black text-2xl font-bold">Ceazur</h2>
           </div>
           {/* logo holder */}
