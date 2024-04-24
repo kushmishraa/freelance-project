@@ -90,40 +90,41 @@ export const ProductDetailPage = () => {
                     </div>
                 </div>
 
-                <div className="w-[100%] md:w-[49%] h-full px-[50px] py-[20px]">
-                    <div className="">
-                        <h2 className="text-2xl font-bold">{params.productName}</h2>
-                        <h2 className="text-gray-500">Pure Cotton Tailored Fit Checked Casual Shirt</h2>
-                    </div>
-
-                    <div>
-                        <div className="flex gap-[5px]">
-                            <span className="font-bold">1349</span>
-                            <span>MRP</span>
-                            <span className="text-gray-500"><s>2699</s></span>
-                            <span className="text-green-700">(50% OFF)</span>
+                <div className="w-[100%] md:w-[49%] h-full pr-[10px] pl-[23px] md:pl-[0px] py-[20px]">
+                    <Paper elevation={3} className="p-[20px]">
+                        <div>
+                            <h2 className="text-2xl font-bold">{params.productName}</h2>
+                            <h2 className="text-gray-500">Pure Cotton Tailored Fit Checked Casual Shirt</h2>
                         </div>
 
                         <div>
-                            <h3 className="text-green-700 font-bold">inclusive of all taxes</h3>
-                        </div>
-                    </div>
+                            <div className="flex gap-[5px]">
+                                <span className="font-bold">₹1349</span>
+                                <span>MRP</span>
+                                <span className="text-gray-500"><s>₹2699</s></span>
+                                <span className="text-green-700">(50% OFF)</span>
+                            </div>
 
-                    <div className="py-[20px]">
-                        <h2 className="font-bold">SELECT SIZE</h2>
-                        <div className="pt-[10px]">
-                            <select className="w-[100px] p-[10px]">
-                                <option className="text-left">S</option>
-                                <option>M</option>
-                                <option>XL</option>
-                                <option>XXL</option>
-                            </select>
+                            <div>
+                                <h3 className="text-green-700 font-bold">inclusive of all taxes</h3>
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="flex gap-[20px] justify-evenly
+                        <div className="py-[20px]">
+                            <h2 className="font-bold">SELECT SIZE</h2>
+                            <div className="pt-[10px]">
+                                <select className="w-[100px] p-[10px] border-[1px] border-gray-500">
+                                    <option className="text-left">S</option>
+                                    <option>M</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className="flex gap-[20px] justify-evenly
                 border-b-[2px] border-gray-300 pb-[20px]">
-                        <div className="
+                            <div className="
                             group/cart
                             border-[1px] 
                             border-black py-[15px]
@@ -132,120 +133,121 @@ export const ProductDetailPage = () => {
                             hover:bg-black transition delay-70
                             cursor-pointer
                             ">
-                            <div className="hidden md:inline">
-                                <ShoppingCartIcon className="group-hover/cart:text-white" />
+                                <div className="hidden md:inline">
+                                    <ShoppingCartIcon className="group-hover/cart:text-white" />
+                                </div>
+                                <h2 className="group-hover/cart:text-white">ADD TO CART</h2>
                             </div>
-                            <h2 className="group-hover/cart:text-white">ADD TO CART</h2>
-                        </div>
 
-                        <div className="
+                            <div className="
                         group/wishlist
                         border-[1px] 
                         border-black py-[15px] flex justify-center items-center  gap-[10px]
                         w-full text-center rounded cursor-pointer
                         hover:bg-black transition delay-70">
-                            <div className="hidden md:inline">
-                                <FavoriteIcon className="group-hover/wishlist:text-red-500" />
+                                <div className="hidden md:inline">
+                                    <FavoriteIcon className="group-hover/wishlist:text-red-500" />
+                                </div>
+                                <h2 className="group-hover/wishlist:text-white">Wishlist</h2>
                             </div>
-                            <h2 className="group-hover/wishlist:text-white">Wishlist</h2>
                         </div>
-                    </div>
 
-                    <div className="pt-[20px]">
-                        <h3 className="font-bold">DELIVERY OPTIONS</h3>
-                    </div>
-
-                    <div className="flex flex-col gap-[10px] pt-[10px]">
-                        <div className="bg-white rounded w-fit pl-[10px] flex border-[1px] border-black">
-                            <input placeholder="Enter Pincode"
-                                className="py-[15px] px-[10px] outline-none bg-transparent" />
-                            <button className="px-[15px] hover:bg-black hover:text-white transition delay-70 w-[100%]">check</button>
+                        <div className="pt-[20px]">
+                            <h3 className="font-bold">DELIVERY OPTIONS</h3>
                         </div>
-                        <span className="text-gray-500 text-[13px]">Please enter PIN code to check delivery time & Pay on Delivery Availability</span>
-                    </div>
 
-                    <div className="py-[15px] *:py-[5px] border-b-[2px] border-gray-300">
-                        <p>100% Original Products</p>
-                        <p>Pay on delivery might be available</p>
-                        <p>Easy 14 days returns and exchanges</p>
-                    </div>
-
-                    <div className="pt-[10px]">
-                        <div>
-                            <h2 className="text-xl font-bold">Product Details</h2>
-                            <div className="pt-[20px]">
-                                <p>
-                                    White other checked opaque casual shirt ,has a spread collar, button placket, 1 patch pocket, long regular sleeves, curved hem
-                                </p>
+                        <div className="flex flex-col gap-[10px] pt-[10px]">
+                            <div className="bg-white rounded w-fit pl-[10px] flex border-[1px] border-black">
+                                <input placeholder="Enter Pincode"
+                                    className="py-[15px] px-[10px] outline-none bg-transparent w-[100px] md:w-[150px]" />
+                                <button className="px-[15px] hover:bg-black hover:text-white transition delay-70 w-[100%]">check</button>
                             </div>
+                            <span className="text-gray-500 text-[13px]">Please enter PIN code to check delivery time & Pay on Delivery Availability</span>
+                        </div>
+
+                        <div className="py-[15px] *:py-[5px] border-b-[2px] border-gray-300">
+                            <p>100% Original Products</p>
+                            <p>Pay on delivery might be available</p>
+                            <p>Easy 14 days returns and exchanges</p>
                         </div>
 
                         <div className="pt-[10px]">
-                            <h2 className="font-bold">Size & Fit</h2>
-                            <div className="pt-[10px]">
-                                <h3>Tailored Fit</h3>
-                                <h3>Size worn by the model: M</h3>
-                                <h3>Chest: 38''</h3>
-                                <h3>Height: 6'1''</h3>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h2>Material & Care</h2>
                             <div>
-                                <h3>100% Cotton</h3>
-                                <h3>Machine Wash</h3>
+                                <h2 className="text-xl font-bold">Product Details</h2>
+                                <div className="pt-[20px]">
+                                    <p>
+                                        White other checked opaque casual shirt ,has a spread collar, button placket, 1 patch pocket, long regular sleeves, curved hem
+                                    </p>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="pt-[10px]">
-                            <h2 className="font-bold">Specification</h2>
-                            <div className="flex flex-wrap gap-[27px] pt-[10px]">
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px] ">
-                                    <div className="text-gray-500 text-[12px]">sleeve length</div>
-                                    <div>Long Sleeves</div>
+                            <div className="pt-[10px]">
+                                <h2 className="font-bold">Size & Fit</h2>
+                                <div className="pt-[10px]">
+                                    <h3>Tailored Fit</h3>
+                                    <h3>Size worn by the model: M</h3>
+                                    <h3>Chest: 38''</h3>
+                                    <h3>Height: 6'1''</h3>
                                 </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">collar</div>
-                                    <div>Spread Collar</div>
-                                </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">Fit</div>
-                                    <div>Tailored Fit</div>
-                                </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">Print or Pattern Type</div>
-                                    <div>Tailored Fit</div>
-                                </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">Occassion</div>
-                                    <div>Casual</div>
-                                </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">Length</div>
-                                    <div>Regualr</div>
-                                </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">Hemline</div>
-                                    <div>Curved</div>
-                                </div>
-
-                                <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                    <div className="text-[12px]">Placket</div>
-                                    <div>Button Placket</div>
-                                </div>
-
                             </div>
+
+                            <div>
+                                <h2>Material & Care</h2>
+                                <div>
+                                    <h3>100% Cotton</h3>
+                                    <h3>Machine Wash</h3>
+                                </div>
+                            </div>
+
+                            <div className="pt-[10px]">
+                                <h2 className="font-bold">Specification</h2>
+                                <div className="flex flex-wrap gap-[27px] pt-[10px]">
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px] ">
+                                        <div className="text-gray-500 text-[12px]">sleeve length</div>
+                                        <div>Long Sleeves</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">collar</div>
+                                        <div>Spread Collar</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">Fit</div>
+                                        <div>Tailored Fit</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">Print or Pattern Type</div>
+                                        <div>Tailored Fit</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">Occassion</div>
+                                        <div>Casual</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">Length</div>
+                                        <div>Regualr</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">Hemline</div>
+                                        <div>Curved</div>
+                                    </div>
+
+                                    <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
+                                        <div className="text-[12px]">Placket</div>
+                                        <div>Button Placket</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
                         </div>
-
-
-                    </div>
+                    </Paper>
 
                 </div>
 

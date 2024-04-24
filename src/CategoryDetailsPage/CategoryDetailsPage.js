@@ -6,8 +6,8 @@ import { Paper } from '@mui/material';
 export const CategoryDetailsPage = () => {
     const params = useParams();
     useEffect(() => {
-        console.log(params);
-    }, [])
+        window.scrollTo({ top: true, behavior: "smooth" })
+    }, [params.categoryName])
     const className = {
         singleProductContainer: "h-[450px] p-[10px] cursor-pointer",
         productBannerImageContainer:
