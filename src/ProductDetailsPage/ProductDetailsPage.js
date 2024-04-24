@@ -239,37 +239,37 @@ export const ProductDetailPage = () => {
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">collar</div>
+                                        <div className="text-[12px] text-gray-500">collar</div>
                                         <div>Spread Collar</div>
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">Fit</div>
+                                        <div className="text-[12px] text-gray-500">Fit</div>
                                         <div>Tailored Fit</div>
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">Print or Pattern Type</div>
+                                        <div className="text-[12px] text-gray-500">Print or Pattern Type</div>
                                         <div>Tailored Fit</div>
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">Occassion</div>
+                                        <div className="text-[12px] text-gray-500">Occassion</div>
                                         <div>Casual</div>
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">Length</div>
+                                        <div className="text-[12px] text-gray-500">Length</div>
                                         <div>Regualr</div>
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">Hemline</div>
+                                        <div className="text-[12px] text-gray-500">Hemline</div>
                                         <div>Curved</div>
                                     </div>
 
                                     <div className="w-[43%] border-b-2 border-gray-300 pb-[5px]">
-                                        <div className="text-[12px]">Placket</div>
+                                        <div className="text-[12px] text-gray-500">Placket</div>
                                         <div>Button Placket</div>
                                     </div>
 
