@@ -90,9 +90,11 @@ export const LandingPage = () => {
           right-0  transition delay-70
            ease-in pb-[30px]"
           >
-            <button className="text-white border-2 border-white px-[15px] py-[10px] opacity-100 hover:bg-white hover:text-black transition dely-70">
-              Shop Now
-            </button>
+            <Link to={"/category/beaches"}>
+              <button className="text-white border-2 border-white px-[15px] py-[10px] opacity-100 hover:bg-white hover:text-black transition dely-70">
+                Shop Now
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -110,9 +112,11 @@ export const LandingPage = () => {
           right-0  transition delay-70
            ease-in pb-[30px]"
           >
-            <button className="text-white border-2 border-white px-[15px] py-[10px] opacity-100 hover:bg-white hover:text-black transition dely-70">
-              Shop Now
-            </button>
+            <Link to={"/category/beaches"}>
+              <button className="text-white border-2 border-white px-[15px] py-[10px] opacity-100 hover:bg-white hover:text-black transition dely-70">
+                Shop Now
+              </button>
+            </Link>
           </div>
         </div>
       </div>

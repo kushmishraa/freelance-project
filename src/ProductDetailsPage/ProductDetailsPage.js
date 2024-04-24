@@ -69,7 +69,7 @@ export const ProductDetailPage = () => {
         <div>
             <div className="flex flex-col md:flex-row">
 
-                <div className="w-[100%] md:w-[51%] flex justify-center flex-wrap gap-[7px]">
+                <div className="w-[100%] md:w-[51%] hidden md:flex justify-center flex-wrap gap-[7px]">
                     <div className="md:max-w-[45%] overflow-hidden">
                         <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1.webp" />
                     </div>
@@ -88,6 +88,37 @@ export const ProductDetailPage = () => {
                     <div className="md:max-w-[45%] overflow-hidden">
                         <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2-1.webp" />
                     </div>
+                </div>
+
+                <div className="md:hidden">
+                    <SlickCarousel
+                        autoplay={true}
+                        pauseOnHover={true}
+                        autoplaySpeed={2000}
+                        slidesToShow={1}
+                        centerMode={true}
+                        infinite={true}
+                        centerPadding={"20%"}
+                    >
+                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
+                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1.webp" />
+                        </div>
+                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
+                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-2.webp" />
+                        </div>
+                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
+                            <img className=" w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-3.webp" />
+                        </div>
+                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
+                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-4.webp" />
+                        </div>
+                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
+                            <img className=" w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2.webp" />
+                        </div>
+                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
+                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2-1.webp" />
+                        </div>
+                    </SlickCarousel>
                 </div>
 
                 <div className="w-[100%] md:w-[49%] h-full pr-[10px] pl-[23px] md:pl-[0px] py-[20px]">
