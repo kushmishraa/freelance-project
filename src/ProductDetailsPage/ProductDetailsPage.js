@@ -121,7 +121,7 @@ export const ProductDetailPage = () => {
                     </SlickCarousel>
                 </div>
 
-                <div className="w-[100%] md:w-[49%] h-full pr-[10px] pl-[23px] md:pl-[0px] py-[20px]">
+                <div className="w-[100%] md:w-[49%] h-full pr-[10px] pl-[10px] md:pl-[0px] py-[20px]">
                     <Paper elevation={3} className="p-[20px]">
                         <div>
                             <h2 className="text-2xl font-bold">{params.productName}</h2>
