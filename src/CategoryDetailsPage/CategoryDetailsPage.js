@@ -131,7 +131,7 @@ export const CategoryDetailsPage = () => {
         <div>
             {/* banner holder */}
             <div className='w-full h-[500px] bg-black relative'>
-                <img src='/freelance-project/categoryDetailsPageBannerImage/beachBannerImage.jpg' className='w-full h-full object-fill opacity-50' />
+                <img src='/freelance-project/categoryDetailsPageBannerImage/beachBannerImage.jpg' className='w-full h-full object-cover md:object-fill opacity-50' />
                 <div className='absolute top-[50%] px-[30px]'>
                     <h2 className='text-[40px] font-bolder text-white'>{params.categoryName.toUpperCase()}</h2>
                 </div>
