@@ -190,7 +190,7 @@ export const ProductDetailPage = () => {
                         <div className="flex flex-col gap-[10px] pt-[10px]">
                             <div className="bg-white rounded w-fit pl-[10px] flex border-[1px] border-black">
                                 <input placeholder="Enter Pincode"
-                                    className="py-[15px] px-[10px] outline-none bg-transparent w-[100px] md:w-[150px]" />
+                                    className="py-[15px] px-[10px] outline-none bg-transparent w-[120px] md:w-[150px]" />
                                 <button className="px-[15px] hover:bg-black hover:text-white transition delay-70 w-[100%]">check</button>
                             </div>
                             <span className="text-gray-500 text-[13px]">Please enter PIN code to check delivery time & Pay on Delivery Availability</span>
