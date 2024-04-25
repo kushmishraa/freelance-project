@@ -14,6 +14,11 @@ export const CategoryDetailsPage = () => {
             "max-w-[250px] min-w-[250px] bg-white  shadow-lg hover:shadow-2xl transition delay-70 hover:mb-[20px]  cursor-pointer",
         productTileCarouselHolder:
             " absolute w-full top-0 scale-0 group-hover/productImage:scale-100 max-h-[400px] transition delay-70 ease-in origin-right",
+        bannerHolder: 'w-full h-[500px] bg-black relative',
+        productContainer: 'mx-[10%]',
+        addToWishlistContainer: 'absolute scale-y-0 group-hover/productImage:scale-y-100 bg- white w-full top-[100%] h-[60px] flex items-center justify-center orgin-bottom',
+        productBottomContainer: "p-[12px] border-2 hover:border-gray-400"
+
     }
     const productArr = [
         {
@@ -126,11 +131,10 @@ export const CategoryDetailsPage = () => {
     }
 
 
-
     return (
         <div>
             {/* banner holder */}
-            <div className='w-full h-[500px] bg-black relative'>
+            <div className={className.bannerHolder}>
                 <img src='/freelance-project/categoryDetailsPageBannerImage/beachBannerImage.jpg' className='w-full h-full object-cover md:object-fill opacity-50' />
                 <div className='absolute top-[50%] px-[30px]'>
                     <h2 className='text-[40px] font-bolder text-white'>{params.categoryName.toUpperCase()}</h2>
@@ -138,7 +142,8 @@ export const CategoryDetailsPage = () => {
             </div>
             {/* banner holder */}
 
-            <div className='mx-[10%]'>
+            {/* product container */}
+            <div className={className.productContainer}>
                 <div className='flex justify-center  flex-wrap'>{
                     productArr.map((productDetails, index) => {
                         return (
@@ -180,20 +185,20 @@ export const CategoryDetailsPage = () => {
                                             </SlickCarousel>
                                         </div>
                                         {/* product tiles carousel holder */}
-                                        <div className='absolute scale-y-0 group-hover/productImage:scale-y-100 
-                                            bg-white w-full top-[100%] h-[60px] 
-                                            flex items-center justify-center 
-                                            orgin-bottom'>
+
+                                        {/* Add to wishlist container */}
+                                        <div className={className.addToWishlistContainer}>
                                             <button className='px-[10px] py-[5px] border-[1px] border-black 
                                                 hover:bg-red-500 transition duration-70 
                                                 hover:border-[0px] 
                                                 hover:text-white' onClick={(e) => e.stopPropagation()}>Add to whishlist</button>
                                         </div>
+                                        {/* Add to wishlist container */}
                                     </div>
 
                                     {/* product description bottom box container */}
                                     <Paper elevation={4}>
-                                        <div className="p-[12px] border-2 hover:border-gray-400">
+                                        <div className={className.productBottomContainer}>
                                             <div>
                                                 <h2 className="font-bold">
                                                     {productDetails.productHeading}
@@ -219,6 +224,7 @@ export const CategoryDetailsPage = () => {
                 }
                 </div>
             </div>
+            {/* product container */}
 
         </div >
     )

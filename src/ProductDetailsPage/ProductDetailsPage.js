@@ -16,6 +16,14 @@ export const ProductDetailPage = () => {
             "max-w-[250px] min-w-[250px] bg-white  shadow-lg hover:shadow-2xl transition delay-70 hover:mb-[20px]  cursor-pointer",
         productTileCarouselHolder:
             " absolute w-full top-0 scale-0 group-hover/productImage:scale-100 max-h-[400px] transition delay-70 ease-in origin-right",
+        productContainer: "flex flex-col md:flex-row",
+        productImageHolder: "w-[100%] md:w-[51%] hidden md:flex justify-center flex-wrap gap-[7px]",
+        mobileCarouselHolder: "md:hidden",
+        productDetailsContainer: "w-[100%] md:w-[49%] h-full pr-[10px] pl-[10px] md:pl-[0px] py-[20px]",
+        similarProductContainer: "py-[50px]",
+        productImageHolder: "md:max-w-[45%] overflow-hidden",
+        productImage: "w-full h-full hover:scale-[1.2] transition delay-70 object-cover",
+        productTileImageHolder: "md:max-w-[45%] overflow-hidden p-[5px]",
     }
 
     const productArr = [
@@ -67,30 +75,34 @@ export const ProductDetailPage = () => {
 
     return (
         <div>
-            <div className="flex flex-col md:flex-row">
+            {/* product container */}
+            <div className={className.productContainer}>
 
-                <div className="w-[100%] md:w-[51%] hidden md:flex justify-center flex-wrap gap-[7px]">
-                    <div className="md:max-w-[45%] overflow-hidden">
-                        <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1.webp" />
+                {/* product image holder */}
+                <div className={className.productImageHolder}>
+                    <div className={className.productImageHolder}>
+                        <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1.webp" />
                     </div>
-                    <div className="md:max-w-[45%] overflow-hidden">
-                        <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-2.webp" />
+                    <div className={className.productImageHolder}>
+                        <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1-2.webp" />
                     </div>
-                    <div className="md:max-w-[45%] overflow-hidden">
-                        <img className=" w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-3.webp" />
+                    <div className={className.productImageHolder}>
+                        <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1-3.webp" />
                     </div>
-                    <div className="md:max-w-[45%] overflow-hidden">
-                        <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-4.webp" />
+                    <div className={className.productImageHolder}>
+                        <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1-4.webp" />
                     </div>
-                    <div className="md:max-w-[45%] overflow-hidden">
-                        <img className=" w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2.webp" />
+                    <div className={className.productImageHolder}>
+                        <img className={className.productImage} src="/freelance-project/productCatImages/tshirt2.webp" />
                     </div>
-                    <div className="md:max-w-[45%] overflow-hidden">
-                        <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2-1.webp" />
+                    <div className={className.productImageHolder}>
+                        <img className={className.productImage} src="/freelance-project/productCatImages/tshirt2-1.webp" />
                     </div>
                 </div>
+                {/* product image holder */}
 
-                <div className="md:hidden">
+                {/* mobile carousel holder */}
+                <div className={className.mobileCarouselHolder}>
                     <SlickCarousel
                         autoplay={true}
                         pauseOnHover={true}
@@ -100,28 +112,30 @@ export const ProductDetailPage = () => {
                         infinite={true}
                         centerPadding={"20%"}
                     >
-                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
-                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1.webp" />
+                        <div className={className.productTileImageHolder}>
+                            <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1.webp" />
                         </div>
-                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
-                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-2.webp" />
+                        <div className={className.productTileImageHolder}>
+                            <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1-2.webp" />
                         </div>
-                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
-                            <img className=" w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-3.webp" />
+                        <div className={className.productTileImageHolder}>
+                            <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1-3.webp" />
                         </div>
-                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
-                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt1-4.webp" />
+                        <div className={className.productTileImageHolder}>
+                            <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1-4.webp" />
                         </div>
-                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
-                            <img className=" w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2.webp" />
+                        <div className={className.productTileImageHolder}>
+                            <img className={className.productImage} src="/freelance-project/productCatImages/tshirt2.webp" />
                         </div>
-                        <div className="md:max-w-[45%] overflow-hidden p-[5px]">
-                            <img className="w-full h-full hover:scale-[1.2] transition delay-70 object-cover" src="/freelance-project/productCatImages/tshirt2-1.webp" />
+                        <div className={className.productTileImageHolder}>
+                            <img className={className.productImage} src="/freelance-project/productCatImages/tshirt2-1.webp" />
                         </div>
                     </SlickCarousel>
                 </div>
+                {/* mobile carousel holder */}
 
-                <div className="w-[100%] md:w-[49%] h-full pr-[10px] pl-[10px] md:pl-[0px] py-[20px]">
+                {/* product details holder */}
+                <div className={className.productDetailsContainer}>
                     <Paper elevation={3} className="p-[20px]">
                         <div>
                             <h2 className="text-2xl font-bold">{params.productName}</h2>
@@ -281,10 +295,12 @@ export const ProductDetailPage = () => {
                     </Paper>
 
                 </div>
+                {/* product details holder */}
 
             </div>
 
-            <div className="py-[50px]">
+            {/* similar products holder */}
+            <div className={className.similarProductContainer}>
                 <h2 className="text-2xl font-bold p-[20px]">Similar Products</h2>
                 <div className={className.productSectionCarouselHolder}>
                     <SlickCarousel
@@ -370,6 +386,7 @@ export const ProductDetailPage = () => {
                     </SlickCarousel>
                 </div>
             </div>
+            {/* similar products holder */}
         </div>
     )
 }
