@@ -17,7 +17,7 @@ export const ProductDetailPage = () => {
         productTileCarouselHolder:
             " absolute w-full top-0 scale-0 group-hover/productImage:scale-100 max-h-[400px] transition delay-70 ease-in origin-right",
         productContainer: "flex flex-col md:flex-row",
-        productImageHolder: "w-[100%] md:w-[51%] hidden md:flex justify-center flex-wrap gap-[7px]",
+        productImageContainer: "w-[100%] md:w-[51%] hidden md:flex justify-center flex-wrap gap-[7px]",
         mobileCarouselHolder: "md:hidden",
         productDetailsContainer: "w-[100%] md:w-[49%] h-full pr-[10px] pl-[10px] md:pl-[0px] py-[20px]",
         similarProductContainer: "py-[50px]",
@@ -79,7 +79,7 @@ export const ProductDetailPage = () => {
             <div className={className.productContainer}>
 
                 {/* product image holder */}
-                <div className={className.productImageHolder}>
+                <div className={className.productImageContainer}>
                     <div className={className.productImageHolder}>
                         <img className={className.productImage} src="/freelance-project/productCatImages/tshirt1.webp" />
                     </div>
@@ -178,10 +178,10 @@ export const ProductDetailPage = () => {
                             hover:bg-black transition delay-70
                             cursor-pointer
                             ">
-                                <div className="hidden md:inline">
+                                <div className="md:inline">
                                     <ShoppingCartIcon className="group-hover/cart:text-white" />
                                 </div>
-                                <h2 className="group-hover/cart:text-white">ADD TO CART</h2>
+                                <h2 className="group-hover/cart:text-white text-[12px] md:text-[14px]">ADD TO CART</h2>
                             </div>
 
                             <div className="
@@ -190,10 +190,10 @@ export const ProductDetailPage = () => {
                         border-black py-[15px] flex justify-center items-center  gap-[10px]
                         w-full text-center rounded cursor-pointer
                         hover:bg-black transition delay-70">
-                                <div className="hidden md:inline">
+                                <div className="md:inline">
                                     <FavoriteIcon className="group-hover/wishlist:text-red-500" />
                                 </div>
-                                <h2 className="group-hover/wishlist:text-white">Wishlist</h2>
+                                <h2 className="group-hover/wishlist:text-white text-[12px] text-[14px]">Wishlist</h2>
                             </div>
                         </div>
 

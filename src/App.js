@@ -8,6 +8,8 @@ import { Header } from "./header/Header";
 import { LandingPage } from "./landingPage/LandingPage";
 import { CategoryDetailsPage } from "./CategoryDetailsPage/CategoryDetailsPage";
 import { ProductDetailPage } from "./ProductDetailsPage/ProductDetailsPage";
+import { Login } from "./Login/Login";
+import { Dashboard } from "./Dashboard/Dashboard";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
             <Route path=":categoryName" element={<CategoryDetailsPage />} />
           </Route>
           <Route path="/product/:productName" element={<ProductDetailPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
         <Footer />
       </HashRouter>

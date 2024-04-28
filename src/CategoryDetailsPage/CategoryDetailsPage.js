@@ -16,7 +16,7 @@ export const CategoryDetailsPage = () => {
             " absolute w-full top-0 scale-0 group-hover/productImage:scale-100 max-h-[400px] transition delay-70 ease-in origin-right",
         bannerHolder: 'w-full h-[500px] bg-black relative',
         productContainer: 'mx-[10%]',
-        addToWishlistContainer: 'absolute scale-y-0 group-hover/productImage:scale-y-100 bg- white w-full top-[100%] h-[60px] flex items-center justify-center orgin-bottom',
+        addToWishlistContainer: 'absolute scale-y-0 group-hover/productImage:scale-y-100 bg-white w-full top-[100%] h-[60px] flex items-center justify-center orgin-bottom',
         productBottomContainer: "p-[12px] border-2 hover:border-gray-400"
 
     }
