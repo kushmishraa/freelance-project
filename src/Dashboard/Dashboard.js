@@ -14,10 +14,10 @@ export const Dashboard = () => {
 
   return (
     <div className="min-h-[100vh] py-[20px] w-[100%] flex flex-col justify-center items-center">
-      <div className="flex flex-col gap-[10px] w-[70%]">
+      <div className="flex flex-col gap-[10px] w-full p-[7px] md:p-[0px] md:w-[70%]">
         <Paper
           elevation={2}
-          className="p-[10px] self-start w-full border-b-[1px] border-gray-400"
+          className="hidden md:flex p-[10px] self-start w-full border-b-[1px] border-gray-400"
         >
           <h2 className="font-bold">Account</h2>
           <h3 className="text-gray-500">Username</h3>
@@ -26,7 +26,7 @@ export const Dashboard = () => {
         <div className="flex gap-[10px]">
           <Paper
             elevation={2}
-            className="*:p-[20px] *:w-[200px] *:cursor-pointer 
+            className="hidden md:flex md:flex-col *:p-[20px] *:w-[200px] *:cursor-pointer 
             border-r-[1px] border-gray-300 
             *:border-b-[1px] *:border-gray-300
             h-fit"
