@@ -1,19 +1,20 @@
 import { Paper } from "@mui/material";
 import React from "react";
 
-export const ProfileSection = () => {
+export const ProfileSection = (props) => {
+  const { setTabToShow } = props;
   return (
     <Paper elevation={2} className="flex flex-col gap-[10px]">
       <div className="w-full bg-gray-200">
         <div className="w-full flex items-center h-[220px]">
-          <div className="w-full flex justify-between p-[50px]">
+          <div className="w-full flex justify-center md:justify-between p-[50px]">
             <div className="w-[120px] h-[120px]">
               <img
                 src="/freelance-project/avatar/default-image.png"
                 className="w-full h-full"
               />
             </div>
-            <div>
+            <div className="hidden md:block">
               <button className="border-[1px] border-black py-[10px] px-[15px] bg-white">
                 Edit Profile
               </button>
@@ -22,8 +23,12 @@ export const ProfileSection = () => {
         </div>
       </div>
 
-      <div className="p-[10px] grid gap-4 grid-cols-3 grid-rows-2 grid-rows-[200px] *:h-[200px]  *:cursor-pointer  pt-[10px]">
-        <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center hover:bg-gray-200">
+      <div className="p-[10px] grid gap-4 md:grid-cols-3 md:grid-rows-2 md:grid-rows-[200px] *:h-[100px] md:*:h-[200px]  *:cursor-pointer  pt-[10px]">
+        <div
+          className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
+        hover:bg-gray-200"
+          onClick={() => setTabToShow(2)}
+        >
           <div className="w-[32px] h-[32px]">
             <img src="/freelance-project/assests/orders.png" />
           </div>
@@ -73,7 +78,7 @@ export const ProfileSection = () => {
       </div>
 
       <div className="p-[10px]">
-        <button className="w-[215px] bg-red-500 text-white font-bold py-[10px] px-[15px]">
+        <button className="w-full md:w-[215px] bg-red-500 text-white font-bold py-[10px] px-[15px]">
           LOGOUT
         </button>
       </div>

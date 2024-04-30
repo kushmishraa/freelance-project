@@ -84,7 +84,7 @@ export const Orders = () => {
         <h3 className="text-gray-500">From Anytime</h3>
       </div>
 
-      <div className="flex flex-col p-[30px] gap-[10px] bg-gray-100 ">
+      <div className="flex flex-col p-[10px] md:p-[30px] gap-[10px] bg-gray-100 ">
         {orders.map((orderDetail) => {
           return (
             <Paper elevation={2} className="flex flex-col gap-[5px] p-[10px]">
