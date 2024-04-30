@@ -51,8 +51,8 @@ export const Login = () => {
                             <h3>By continuing, I agree to the <span className="font-bold cursor-pointer">Terms of use</span> & <span className="font-bold cursor-pointer">Privacy Policy</span> </h3>
                         </div>
 
-                        <div className="text-center border-[1px] border-black rounded p-[10px] cursor-pointer" onClick={() => setContinue(!iscontinue)}>
-                            <button className="text-center">CONTINUE</button>
+                        <div className="text-center border-[1px] border-black rounded p-[10px] cursor-pointe hover:bg-black hover:text-white transition delay-70" onClick={() => setContinue(!iscontinue)}>
+                            <button className="text-center ">CONTINUE</button>
                         </div>
 
                         <div>

@@ -95,8 +95,8 @@ export const OtpPage = (props) => {
                         }
                     </div>
 
-                    <div className="border-[1px] border-black p-[10px] text-center">
-                        <button>Submit</button>
+                    <div className="border-[1px] border-black p-[10px] text-center hover:bg-black hover:text-white transition delay-70">
+                        <button className="w-full h-full">Submit</button>
                     </div>
 
                     <div>
