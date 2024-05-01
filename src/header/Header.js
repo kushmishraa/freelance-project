@@ -149,17 +149,24 @@ export const Header = (props) => {
           </div>
           {/* menu icon holder */}
         </div>
+
         {/* mobile menu holder */}
         <div className={clasName.headerRightContainer} ref={menuRef}>
           <div className="flex items-center">
             <div className="flex gap-[30px] ">
               {isUserLoggedIn ? (
-                <AccountCircleIcon sx={{ color: "black" }} />
+                <div onClick={() => navigate('/dashboard')}>
+                  <AccountCircleIcon sx={{ color: "black" }} />
+                </div>
               ) : (
                 <p
                   className="font-bold cursor-pointer px-[10px] py-[5px] 
                             rounded-xl"
-                  onClick={() => setLoggedInUser(!isUserLoggedIn)}
+                  onClick={() => {
+                    navigate('/login')
+                    setLoggedInUser(!isUserLoggedIn)
+                  }
+                  }
                 >
                   Login
                 </p>
