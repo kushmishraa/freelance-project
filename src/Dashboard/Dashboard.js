@@ -17,7 +17,7 @@ export const Dashboard = () => {
       <div className="flex flex-col gap-[10px] w-full p-[7px] md:p-[0px] md:w-[70%]">
         <Paper
           elevation={2}
-          className="hidden md:flex p-[10px] self-start w-full border-b-[1px] border-gray-400"
+          className="hidden md:flex md:flex-col p-[10px] self-start w-full border-b-[1px] border-gray-400"
         >
           <h2 className="font-bold">Account</h2>
           <h3 className="text-gray-500">Username</h3>

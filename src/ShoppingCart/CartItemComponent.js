@@ -5,6 +5,8 @@ import { Button, Paper } from "@mui/material";
 import { ItemCard } from "./ItemCard";
 
 export const CartItemComponent = (props) => {
+  const { setStepperIndex } = props;
+
   const className = {
     carItemContainer: "w-full flex flex-col md:p-[25px]",
     cartItemDetailContainer: "p-[20px] flex flex-col gap-[20px] md:p-[25px]",
@@ -41,7 +43,7 @@ export const CartItemComponent = (props) => {
                   <span className="font-medium">Price</span>
                   <span className="font-extrabold text-[18px]">₹1,244</span>
                 </div>
-                <div>
+                <div onClick={() => setStepperIndex(1)}>
                   <button className={className.placeOrderBtn}>
                     Place Order
                   </button>

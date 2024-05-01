@@ -64,7 +64,8 @@ export const ProfileSection = (props) => {
           </div>
         </div>
 
-        <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center hover:bg-gray-200">
+        <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
+        hover:bg-gray-200"  onClick={() => setTabToShow(1)}>
           <div className="w-[32px] h-[32px]">
             <img src="/freelance-project/assests/details.png" />
           </div>

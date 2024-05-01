@@ -10,7 +10,7 @@ export const Login = () => {
 
     const className = {
         loginPageContainer:
-            "flex items-center justify-center px-[15px] md:px-[0px] md:py-[50px]",
+            "flex items-center justify-center px-[15px] md:px-[0px] md:py-[50px] py-[10px]",
         loginContainer: "w-[400px] flex flex-col gap-[15px] pb-[20px]",
         bannerContainer: "h-[160px]",
         loginFormContainer:
