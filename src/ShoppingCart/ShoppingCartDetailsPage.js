@@ -10,7 +10,7 @@ export const ShoppingCartDetailsPage = (props) => {
   const className = {
     mobileStepperContainer:
       "w-full py-[10px] sticky top-0 bg-white z-10",
-    cartDetailsPageContainer: "w-full md:min-w-[70%] flex max-md:flex-col",
+    cartDetailsPageContainer: "w-full mt-[5px] md:mt-[0px] md:min-w-[70%] flex max-md:flex-col",
     mobilePlaceOrderContainer: "sticky w-full bottom-0",
     placeOrderBtn:
       "bg-sky-500 rounded px-[40px] py-[10px] text-white font-medium text-xl",
