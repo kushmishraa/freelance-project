@@ -32,7 +32,7 @@ export const ShoppingCartDetailsPage = (props) => {
 
       <div className={className.cartDetailsPageContainer}>
         {stepperIndex == 0 && <CartItemComponent setStepperIndex={setStepperIndex} />}
-        {stepperIndex == 1 && <AddressComponent />}
+        {stepperIndex == 1 && <AddressComponent setStepperIndex={setStepperIndex} />}
         <CartPriceDetails />
       </div>
     </>

@@ -117,24 +117,29 @@ export const Header = (props) => {
           {/* icons holder */}
           <div className="hidden sm:flex items-center sm:gap-[20px]">
             {isUserLoggedIn ? (
-              <AccountCircleIcon sx={{ color: "black" }} />
+              <div onClick={() => navigate('/dashboard')} className="cursor-pointer">
+                <AccountCircleIcon sx={{ color: "black" }} />
+              </div>
             ) : (
               <p
                 className="font-bold cursor-pointer px-[10px] py-[5px] 
                             rounded-xl"
-                onClick={() => setLoggedInUser(!isUserLoggedIn)}
+                onClick={() => {
+                  setLoggedInUser(!isUserLoggedIn)
+                  navigate('/login')
+                }}
               >
                 Login
               </p>
             )}
-            <div className="relative cursor-pointer">
+            <div className="relative cursor-pointer" onClick={() => navigate('/wishlist')}>
               <FavoriteIcon sx={{ color: "black" }} />
               <div className="absolute top-0 right-0 rounded-[100%] w-[12px] h-[12px] bg-red-500 flex items-center justify-center">
                 <p className="text-white text-[8px]">10</p>
               </div>
             </div>
 
-            <div className="relative cursor-pointer">
+            <div className="relative cursor-pointer" onClick={() => navigate('/cart')}>
               <ShoppingCartIcon sx={{ color: "black" }} />
               <div className="absolute top-0 right-0 rounded-[100%] w-[12px] h-[12px] bg-red-500 flex items-center justify-center">
                 <p className="text-white text-[8px]">10</p>
@@ -172,14 +177,14 @@ export const Header = (props) => {
                 </p>
               )}
 
-              <div className="relative">
+              <div className="relative" onClick={() => navigate("/wishlist")}>
                 <FavoriteIcon sx={{ color: "black" }} />
                 <div className="absolute top-0 right-0 rounded-[100%] w-[12px] h-[12px] bg-red-500 flex items-center justify-center">
                   <p className="text-white text-[10px]">1</p>
                 </div>
               </div>
 
-              <div className="relative">
+              <div className="relative" onClick={() => navigate('/cart')}>
                 <ShoppingCartIcon sx={{ color: "black" }} />
                 <div className="absolute top-0 right-0 rounded-[100%] w-[12px] h-[12px] bg-red-500 flex items-center justify-center">
                   <p className="text-white text-[10px]">1</p>

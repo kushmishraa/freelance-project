@@ -3,13 +3,19 @@ import { ProfileSection } from "./ProfileSection";
 import { ProfileDetails } from "./ProfileDetails";
 import { Paper } from "@mui/material";
 import { Orders } from "./Orders";
+import { Address } from "./Address";
+import { Wishlist } from "./Wishlisht";
 
 export const Dashboard = () => {
   const [tabToShow, setTabToShow] = useState(0);
+
+  // Dynamic tab rendering based on indices
   const sectionToShow = [
     <ProfileSection setTabToShow={setTabToShow} />,
     <ProfileDetails setTabToShow={setTabToShow} />,
     <Orders setTabToShow={setTabToShow} />,
+    <Address setTabToShow={setTabToShow} />,
+    <Wishlist setTabToShow={setTabToShow} />
   ];
 
   return (
@@ -44,7 +50,7 @@ export const Dashboard = () => {
               <h3 className="text-gray-500">Account</h3>
               <div>
                 <h2 onClick={() => setTabToShow(1)}>Profile</h2>
-                <h2>Addresses</h2>
+                <h2 onClick={() => setTabToShow(3)}>Addresses</h2>
               </div>
             </div>
 
@@ -57,6 +63,7 @@ export const Dashboard = () => {
             </div>
           </Paper>
 
+          {/* main rendering area according to the tabs */}
           <div className="w-full h-full">{sectionToShow[tabToShow]}</div>
         </div>
       </div>

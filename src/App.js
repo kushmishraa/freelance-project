@@ -10,6 +10,7 @@ import { CategoryDetailsPage } from "./CategoryDetailsPage/CategoryDetailsPage";
 import { ProductDetailPage } from "./ProductDetailsPage/ProductDetailsPage";
 import { Login } from "./Login/Login";
 import { Dashboard } from "./Dashboard/Dashboard";
+import { WishlishtComponent } from "./Wishlist/WishListComponent";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/product/:productName" element={<ProductDetailPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/wishlist" element={<WishlishtComponent />} />
         </Routes>
         <Footer />
       </HashRouter>
