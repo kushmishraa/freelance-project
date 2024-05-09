@@ -1,21 +1,32 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ProfileSection } from "./ProfileSection";
 import { ProfileDetails } from "./ProfileDetails";
 import { Paper } from "@mui/material";
 import { Orders } from "./Orders";
 import { Address } from "./Address";
 import { Wishlist } from "./Wishlisht";
+import { useNavigate, useParams } from "react-router-dom";
+import { dashboardIndexing } from "./constantForPageIndexing";
 
 export const Dashboard = () => {
   const [tabToShow, setTabToShow] = useState(0);
+  const navigate = useNavigate();
+  const params = useParams();
+  useEffect(() => {
+    params.component == "dashboard" && setTabToShow(dashboardIndexing.dashboard);
+    params.component == "order" && setTabToShow(dashboardIndexing.order);
+    params.component == "address" && setTabToShow(dashboardIndexing.address);
+    params.component == "wishlist" && setTabToShow(dashboardIndexing.wishlist);
+    params.component == "profile" && setTabToShow(dashboardIndexing.profile);
+  }, [])
 
   // Dynamic tab rendering based on indices
   const sectionToShow = [
-    <ProfileSection setTabToShow={setTabToShow} />,
-    <ProfileDetails setTabToShow={setTabToShow} />,
-    <Orders setTabToShow={setTabToShow} />,
-    <Address setTabToShow={setTabToShow} />,
-    <Wishlist setTabToShow={setTabToShow} />
+    <ProfileSection setTabToShow={setTabToShow} navigate={navigate} />,
+    <ProfileDetails setTabToShow={setTabToShow} navigate={navigate} />,
+    <Orders setTabToShow={setTabToShow} navigate={navigate} />,
+    <Address setTabToShow={setTabToShow} navigate={navigate} />,
+    <Wishlist setTabToShow={setTabToShow} navigate={navigate} />
   ];
 
   return (
@@ -38,19 +49,32 @@ export const Dashboard = () => {
             h-fit"
           >
             <div className="*:p-[2px]">
-              <h2 onClick={() => setTabToShow(0)}>Overview</h2>
+              <h2 onClick={() => {
+                navigate('/dashboard')
+                setTabToShow(dashboardIndexing.dashboard)
+              }}>Overview</h2>
             </div>
 
             <div className="*:p-[2px]">
               <h3 className="text-gray-500">Orders</h3>
-              <h2 onClick={() => setTabToShow(2)}>Orders & Returns</h2>
+              <h2 onClick={() => {
+                navigate('/dashboard/order')
+                setTabToShow(dashboardIndexing.order)
+              }
+              }>Orders & Returns</h2>
             </div>
 
             <div className="*:p-[2px]">
               <h3 className="text-gray-500">Account</h3>
               <div>
-                <h2 onClick={() => setTabToShow(1)}>Profile</h2>
-                <h2 onClick={() => setTabToShow(3)}>Addresses</h2>
+                <h2 onClick={() => {
+                  navigate("/dashboard/profile")
+                  setTabToShow(dashboardIndexing.profile)
+                }}>Profile</h2>
+                <h2 onClick={() => {
+                  navigate("/dashboard/address")
+                  setTabToShow(dashboardIndexing.address)
+                }}>Addresses</h2>
               </div>
             </div>
 

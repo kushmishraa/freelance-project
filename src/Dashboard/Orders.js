@@ -2,9 +2,10 @@ import { Paper } from "@mui/material";
 import React, { useState } from "react";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { ArrowBack } from "@mui/icons-material";
+import { dashboardIndexing } from "./constantForPageIndexing";
 
 export const Orders = (props) => {
-  const { setTabToShow } = props;
+  const { setTabToShow, navigate } = props;
   const orders = [{ status: 0 }, { status: 1 }, { status: 2 }];
 
   const renderDeliveryStatus = (status) => {
@@ -81,7 +82,10 @@ export const Orders = (props) => {
 
   return (
     <Paper elevation={3} className="flex flex-col">
-      <div onClick={() => setTabToShow(0)} className="p-[10px]">
+      <div onClick={() => {
+        navigate("/dashboard")
+        setTabToShow(dashboardIndexing.dashboard)
+      }} className="p-[10px]">
         <ArrowBack className="cursor-pointer" />
       </div>
       <div className="p-[20px]">

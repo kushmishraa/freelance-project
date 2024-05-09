@@ -1,8 +1,10 @@
 import { Paper } from "@mui/material";
 import React from "react";
+import { dashboardIndexing } from "./constantForPageIndexing";
 
 export const ProfileSection = (props) => {
-  const { setTabToShow } = props;
+  const { setTabToShow, navigate } = props;
+
   return (
     <Paper elevation={2} className="flex flex-col gap-[10px]">
       <div className="w-full bg-gray-200">
@@ -27,7 +29,10 @@ export const ProfileSection = (props) => {
         <div
           className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
         hover:bg-gray-200"
-          onClick={() => setTabToShow(2)}
+          onClick={() => {
+            navigate("/dashboard/order")
+            setTabToShow(dashboardIndexing.order)
+          }}
         >
           <div className="w-[32px] h-[32px]">
             <img src="/freelance-project/assests/orders.png" />
@@ -41,7 +46,10 @@ export const ProfileSection = (props) => {
         </div>
 
         <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center hover:bg-gray-200"
-          onClick={() => setTabToShow(4)}>
+          onClick={() => {
+            navigate("/dashboard/wishlist")
+            setTabToShow(dashboardIndexing.wishlist)
+          }}>
           <div className="w-[32px] h-[32px]">
             <img src="/freelance-project/assests/wishlist.png" />
           </div>
@@ -55,7 +63,10 @@ export const ProfileSection = (props) => {
 
         <div className="flex flex-col border-[1px] border-gray-300 items-center 
         justify-center hover:bg-gray-200"
-          onClick={() => setTabToShow(3)}>
+          onClick={() => {
+            navigate('/dashboard/address')
+            setTabToShow(dashboardIndexing.address)
+          }}>
           <div className="w-[32px] h-[32px]">
             <img src="/freelance-project/assests/address.png" />
           </div>
@@ -68,7 +79,10 @@ export const ProfileSection = (props) => {
         </div>
 
         <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
-        hover:bg-gray-200"  onClick={() => setTabToShow(1)}>
+        hover:bg-gray-200"  onClick={() => {
+            navigate('/dashboard/profile')
+            setTabToShow(dashboardIndexing.profile)
+          }}>
           <div className="w-[32px] h-[32px]">
             <img src="/freelance-project/assests/details.png" />
           </div>

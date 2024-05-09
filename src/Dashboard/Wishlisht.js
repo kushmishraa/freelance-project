@@ -5,10 +5,13 @@ import { ArrowBack } from "@mui/icons-material";
 
 
 export const Wishlist = (props) => {
-    const { setTabToShow } = props;
+    const { setTabToShow, navigate } = props;
     return (
         <Paper elevation={3}>
-            <div onClick={() => setTabToShow(0)} className="p-[10px]">
+            <div onClick={() => {
+                navigate('/dashboard')
+                setTabToShow(0)
+            }} className="p-[10px]">
                 <ArrowBack className="cursor-pointer" />
             </div>
 

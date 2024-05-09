@@ -2,9 +2,10 @@ import { ArrowBack } from "@mui/icons-material";
 import { Paper } from "@mui/material";
 import React, { useState } from "react";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import { dashboardIndexing } from "./constantForPageIndexing";
 
 export const ProfileDetails = (props) => {
-    const { setTabToShow } = props;
+    const { setTabToShow, navigate } = props;
 
     const [formState, setFormState] = useState({
         phoneNumber: "9999999999",
@@ -12,7 +13,10 @@ export const ProfileDetails = (props) => {
     })
     return (
         <Paper elevation={2} className="border-[1px] p-[10px] border-gray-300">
-            <div onClick={() => setTabToShow(0)}>
+            <div onClick={() => {
+                navigate('/dashboard')
+                setTabToShow(dashboardIndexing.dashboard)
+            }}>
                 <ArrowBack className="cursor-pointer" />
             </div>
             <div className="w-full flex flex-col gap-[15px] justify-center  h-full">

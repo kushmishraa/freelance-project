@@ -2,8 +2,11 @@ import { Paper } from "@mui/material";
 import React, { useState } from "react";
 import { AddressDialogComponent } from "../Components/AddressDialogComponent";
 import { AddressCardComponent } from "./AddressCardComponent";
+import { ArrowBack } from "@mui/icons-material";
+import { dashboardIndexing } from "./constantForPageIndexing";
 
-export const Address = () => {
+export const Address = (props) => {
+    const { navigate, setTabToShow } = props;
     const [localState, setLocalState] = useState();
     const [openDialog, setOpenDialog] = useState(false);
 
@@ -53,6 +56,12 @@ export const Address = () => {
     return (
         <>
             <Paper className="p-[10px]">
+                <div onClick={() => {
+                    navigate("/dashboard")
+                    setTabToShow(dashboardIndexing.dashboard)
+                }} className="pb-[20px]">
+                    <ArrowBack className="cursor-pointer" />
+                </div>
                 <div className="flex justify-between">
                     <div>
                         <h2 className="font-bold">Saved Addresses</h2>

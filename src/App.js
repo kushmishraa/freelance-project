@@ -26,7 +26,9 @@ function App() {
           </Route>
           <Route path="/product/:productName" element={<ProductDetailPage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />}>
+            <Route path=":component" element={<Dashboard />} />
+          </Route>
           <Route path="/wishlist" element={<WishlishtComponent />} />
         </Routes>
         <Footer />
