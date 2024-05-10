@@ -1,6 +1,10 @@
 import { Paper } from "@mui/material";
 import React from "react";
 import { dashboardIndexing } from "./constantForPageIndexing";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import TurnedInNotOutlinedIcon from "@mui/icons-material/TurnedInNotOutlined";
+import WhereToVoteOutlinedIcon from "@mui/icons-material/WhereToVoteOutlined";
+import DescriptionOutlinedIcon from "@mui/icons-material/DescriptionOutlined";
 
 export const ProfileSection = (props) => {
   const { setTabToShow, navigate } = props;
@@ -30,12 +34,12 @@ export const ProfileSection = (props) => {
           className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
         hover:bg-gray-200"
           onClick={() => {
-            navigate("/dashboard/order")
-            setTabToShow(dashboardIndexing.order)
+            navigate("/dashboard/order");
+            setTabToShow(dashboardIndexing.order);
           }}
         >
           <div className="w-[32px] h-[32px]">
-            <img src="/freelance-project/assests/orders.png" />
+            <ShoppingCartOutlinedIcon sx={{ width: "100%", height: "100%" }} />
           </div>
           <div className="text-center">
             <h2 className="font-bold">Orders</h2>
@@ -45,13 +49,15 @@ export const ProfileSection = (props) => {
           </div>
         </div>
 
-        <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center hover:bg-gray-200"
+        <div
+          className="flex flex-col border-[1px] border-gray-300 items-center justify-center hover:bg-gray-200"
           onClick={() => {
-            navigate("/dashboard/wishlist")
-            setTabToShow(dashboardIndexing.wishlist)
-          }}>
+            navigate("/dashboard/wishlist");
+            setTabToShow(dashboardIndexing.wishlist);
+          }}
+        >
           <div className="w-[32px] h-[32px]">
-            <img src="/freelance-project/assests/wishlist.png" />
+            <TurnedInNotOutlinedIcon sx={{ width: "100%", height: "100%" }} />
           </div>
           <div className="text-center">
             <h2 className="font-bold">Wishlist</h2>
@@ -61,14 +67,16 @@ export const ProfileSection = (props) => {
           </div>
         </div>
 
-        <div className="flex flex-col border-[1px] border-gray-300 items-center 
+        <div
+          className="flex flex-col border-[1px] border-gray-300 items-center 
         justify-center hover:bg-gray-200"
           onClick={() => {
-            navigate('/dashboard/address')
-            setTabToShow(dashboardIndexing.address)
-          }}>
+            navigate("/dashboard/address");
+            setTabToShow(dashboardIndexing.address);
+          }}
+        >
           <div className="w-[32px] h-[32px]">
-            <img src="/freelance-project/assests/address.png" />
+            <WhereToVoteOutlinedIcon sx={{ width: "100%", height: "100%" }} />
           </div>
           <div className="text-center">
             <h2 className="font-bold">Address</h2>
@@ -78,13 +86,16 @@ export const ProfileSection = (props) => {
           </div>
         </div>
 
-        <div className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
-        hover:bg-gray-200"  onClick={() => {
-            navigate('/dashboard/profile')
-            setTabToShow(dashboardIndexing.profile)
-          }}>
+        <div
+          className="flex flex-col border-[1px] border-gray-300 items-center justify-center 
+        hover:bg-gray-200"
+          onClick={() => {
+            navigate("/dashboard/profile");
+            setTabToShow(dashboardIndexing.profile);
+          }}
+        >
           <div className="w-[32px] h-[32px]">
-            <img src="/freelance-project/assests/details.png" />
+            <DescriptionOutlinedIcon sx={{ width: "100%", height: "100%" }} />
           </div>
           <div className="text-center">
             <h2 className="font-bold">Profile Details</h2>
